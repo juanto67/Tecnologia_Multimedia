@@ -1,0 +1,326 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-pa-amb-oli",
+            "url": "https://tu-dominio.com/recetas/pa-amb-oli",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/pa-amb-oli.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Pa amb oli (Mallorca)",
+                "description": "Cómo preparar pa amb oli paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/pa-amb-oli.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/pa-amb-oli.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/pa-amb-oli",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT1M"
+            },
+            "name": "Pa amb oli (Mallorca)",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-03",
+            "description": "Pan con tomate y aceite de oliva, acompañado de embutidos y/o queso. Sencillo y muy típico en Mallorca.",
+            "prepTime": "PT10M",
+            "cookTime": "PT0M",
+            "totalTime": "PT10M",
+            "recipeYield": "2 raciones",
+            "recipeCategory": "Entrante",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, pa amb oli, pan con tomate, aceite de oliva",
+            "recipeIngredient": [
+                "4 rebanadas de pan payés (o pan moreno)",
+                "2 tomates de colgar (o tomates maduros)",
+                "Aceite de oliva virgen extra",
+                "Sal",
+                "Opcional: sobrasada", 
+                "Opcional: jamón serrano",
+                "Opcional: queso mahonés"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Tuesta ligeramente el pan si lo prefieres."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Frota el tomate sobre el pan hasta impregnar la miga."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Añade sal y un buen chorro de aceite de oliva."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sirve con sobrasada, jamón o queso, al gusto."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-tumbet",
+            "url": "https://tu-dominio.com/recetas/tumbet",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/tumbet.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Tumbet mallorquín",
+                "description": "Cómo preparar tumbet mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/tumbet.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/tumbet.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/tumbet",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT2M"
+            },
+            "name": "Tumbet mallorquín",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-03",
+            "description": "Guiso/ensalada templada de verduras fritas (berenjena, patata, pimiento) con salsa de tomate. Un clásico veraniego.",
+            "prepTime": "PT30M",
+            "cookTime": "PT40M",
+            "totalTime": "PT1H10M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, tumbet, verduras, berenjena, tomate",
+            "recipeIngredient": [
+                "2 berenjenas",
+                "2 patatas grandes",
+                "2 pimientos rojos (o 1 rojo y 1 verde)",
+                "4 tomates maduros (o 400 g de tomate triturado)",
+                "2 dientes de ajo",
+                "Aceite de oliva (para freír y para la salsa)",
+                "Sal",
+                "Pimienta (opcional)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Corta las patatas en rodajas y fríelas hasta que estén tiernas; escurre y sala."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Corta las berenjenas en rodajas, fríelas y escurre; sala."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Asa o fríe los pimientos en tiras; escurre y reserva."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Prepara una salsa sofriendo el ajo y añadiendo el tomate; cocina 15–20 min y ajusta de sal."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Monta en una fuente capas de patata, berenjena y pimiento; cubre con la salsa de tomate."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-frito-mallorquin",
+            "url": "https://tu-dominio.com/recetas/frito-mallorquin",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/frito-mallorquin.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Frito mallorquín",
+                "description": "Cómo preparar frito mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/frito-mallorquin.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/frito-mallorquin.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/frito-mallorquin",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Frito mallorquín",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-03",
+            "description": "Salteado tradicional con patata, verduras y, según la versión, carne o hígado. Se aromatiza con hinojo.",
+            "prepTime": "PT35M",
+            "cookTime": "PT45M",
+            "totalTime": "PT1H20M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, frito mallorquín, hinojo, patata",
+            "recipeIngredient": [
+                "600 g de patatas",
+                "1 pimiento rojo",
+                "1 pimiento verde",
+                "1 cebolla",
+                "2 dientes de ajo",
+                "300 g de carne (cerdo o cordero) o mezcla con hígado (opcional)",
+                "150 g de guisantes (opcional)",
+                "Hinojo fresco (o semillas de hinojo, al gusto)",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Corta las patatas en dados y fríelas hasta dorar; escurre y reserva."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "En una sartén amplia, sofríe cebolla y pimientos; añade el ajo."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Incorpora la carne (y/o hígado) y saltea hasta que esté hecha."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Añade las patatas reservadas, el hinojo y los guisantes si los usas; mezcla y ajusta de sal y pimienta."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-coca-de-trampo",
+            "url": "https://tu-dominio.com/recetas/coca-de-trampo",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/coca-de-trampo.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Coca de trampó",
+                "description": "Cómo preparar coca de trampó paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/coca-de-trampo.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/coca-de-trampo.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/coca-de-trampo",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT2M"
+            },
+            "name": "Coca de trampó",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-03",
+            "description": "Coca salada con base de masa y cobertura de 'trampó' (tomate, pimiento y cebolla). Ideal para compartir.",
+            "prepTime": "PT25M",
+            "cookTime": "PT30M",
+            "totalTime": "PT55M",
+            "recipeYield": "6 raciones",
+            "recipeCategory": "Entrante",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, coca de trampó, trampó, horno",
+            "recipeIngredient": [
+                "250 g de harina",
+                "80 ml de aceite de oliva",
+                "100 ml de agua",
+                "1 pizca de sal",
+                "2 tomates maduros",
+                "1 pimiento verde",
+                "1 cebolla",
+                "Aceite de oliva virgen extra",
+                "Sal"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Precalienta el horno a 200 °C."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mezcla harina, agua, aceite y sal; amasa lo justo y estira la masa en una bandeja."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Pica tomate, pimiento y cebolla; aliña con aceite y sal (trampó)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Reparte el trampó sobre la masa y hornea 25–30 min, hasta que la base esté hecha."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-ensaimada",
+            "url": "https://tu-dominio.com/recetas/ensaimada",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/ensaimada.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Ensaimada mallorquina (casera)",
+                "description": "Cómo preparar ensaimada mallorquina casera paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/ensaimada.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/ensaimada.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/ensaimada",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT4M"
+            },
+            "name": "Ensaimada mallorquina (casera)",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-03",
+            "description": "Dulce emblemático de Mallorca elaborado con masa enriquecida y manteca de cerdo (saïm).",
+            "prepTime": "PT40M",
+            "cookTime": "PT20M",
+            "totalTime": "PT1H",
+            "recipeYield": "1 ensaimada mediana",
+            "recipeCategory": "Postre",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, ensaimada, repostería, dulce",
+            "recipeIngredient": [
+                "300 g de harina de fuerza",
+                "60 g de azúcar",
+                "2 huevos",
+                "120 ml de leche templada",
+                "7 g de levadura seca de panadería (o 20 g fresca)",
+                "1 pizca de sal",
+                "Manteca de cerdo (saïm), para untar",
+                "Azúcar glas, para espolvorear"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Disuelve la levadura en la leche templada. Mezcla con harina, azúcar, huevos y sal; amasa hasta lograr una masa elástica."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Deja fermentar tapada hasta que doble volumen (el tiempo depende de la temperatura)."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Estira la masa muy fina, unta con manteca y enrolla formando un cilindro; luego forma una espiral dejando separación para que crezca."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Deja una segunda fermentación hasta que aumente notablemente."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea a 180 °C 15–20 min, hasta dorar. Enfría y espolvorea azúcar glas."
+                }
+            ]
+        }
+    ]
+}
