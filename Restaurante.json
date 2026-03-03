@@ -1,0 +1,268 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Restaurant",
+            "@id": "#restaurant-palma",
+            "name": "Sa Cuina Mallorquina (Palma)",
+            "description": "Restaurante de comida típica mallorquina con carta basada en recetas tradicionales.",
+            "url": "https://tu-dominio.com/restaurantes/sa-cuina-mallorquina-palma",
+            "telephone": "+34 600 000 001",
+            "image": [
+                "https://tu-dominio.com/imagenes/restaurantes/sa-cuina-mallorquina-palma.jpg"
+            ],
+            "priceRange": "€€",
+            "servesCuisine": [
+                "Mallorquina"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Carrer Exemple 1",
+                "addressLocality": "Palma",
+                "addressRegion": "Illes Balears",
+                "postalCode": "07001",
+                "addressCountry": "ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.5696,
+                "longitude": 2.6502
+            },
+            "hasMap": "https://www.openstreetmap.org/?mlat=39.5696&mlon=2.6502#map=18/39.5696/2.6502",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday"
+                    ],
+                    "opens": "13:00",
+                    "closes": "23:00"
+                }
+            ],
+            "hasMenu": {
+                "@type": "Menu",
+                "@id": "#menu-palma",
+                "name": "Carta mallorquina",
+                "hasMenuSection": [
+                    {
+                        "@type": "MenuSection",
+                        "name": "Platos típicos",
+                        "hasMenuItem": [
+                            {
+                                "@type": "MenuItem",
+                                "name": "Pa amb oli",
+                                "description": "Pan con tomate y aceite de oliva con acompañamientos a elegir.",
+                                "subjectOf": {
+                                    "@id": "#recipe-pa-amb-oli"
+                                }
+                            },
+                            {
+                                "@type": "MenuItem",
+                                "name": "Tumbet mallorquín",
+                                "description": "Verduras con salsa de tomate al estilo tradicional.",
+                                "subjectOf": {
+                                    "@id": "#recipe-tumbet"
+                                }
+                            },
+                            {
+                                "@type": "MenuItem",
+                                "name": "Frito mallorquín",
+                                "description": "Salteado con patata, verduras y hinojo.",
+                                "subjectOf": {
+                                    "@id": "#recipe-frito-mallorquin"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "MenuSection",
+                        "name": "Postres",
+                        "hasMenuItem": [
+                            {
+                                "@type": "MenuItem",
+                                "name": "Ensaimada mallorquina",
+                                "description": "Ensaimada casera espolvoreada con azúcar glas.",
+                                "subjectOf": {
+                                    "@id": "#recipe-ensaimada"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Restaurant",
+            "@id": "#restaurant-soller",
+            "name": "Can Trampó (Sóller)",
+            "description": "Cocina mallorquina de mercado con platos de temporada inspirados en recetas tradicionales.",
+            "url": "https://tu-dominio.com/restaurantes/can-trampo-soller",
+            "telephone": "+34 600 000 002",
+            "image": [
+                "https://tu-dominio.com/imagenes/restaurantes/can-trampo-soller.jpg"
+            ],
+            "priceRange": "€€",
+            "servesCuisine": [
+                "Mallorquina"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plaça Exemple 2",
+                "addressLocality": "Sóller",
+                "addressRegion": "Illes Balears",
+                "postalCode": "07100",
+                "addressCountry": "ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.7667,
+                "longitude": 2.7152
+            },
+            "hasMap": "https://www.openstreetmap.org/?mlat=39.7667&mlon=2.7152#map=18/39.7667/2.7152",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "opens": "12:30",
+                    "closes": "22:30"
+                }
+            ],
+            "hasMenu": {
+                "@type": "Menu",
+                "@id": "#menu-soller",
+                "name": "Carta tradicional",
+                "hasMenuSection": [
+                    {
+                        "@type": "MenuSection",
+                        "name": "Para compartir",
+                        "hasMenuItem": [
+                            {
+                                "@type": "MenuItem",
+                                "name": "Coca de trampó",
+                                "description": "Coca salada con tomate, pimiento y cebolla.",
+                                "subjectOf": {
+                                    "@id": "#recipe-coca-de-trampo"
+                                }
+                            },
+                            {
+                                "@type": "MenuItem",
+                                "name": "Pa amb oli",
+                                "description": "Pan moreno con tomate, aceite y sal, con embutidos.",
+                                "subjectOf": {
+                                    "@id": "#recipe-pa-amb-oli"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "MenuSection",
+                        "name": "Platos",
+                        "hasMenuItem": [
+                            {
+                                "@type": "MenuItem",
+                                "name": "Tumbet mallorquín",
+                                "description": "Plato de verduras con salsa de tomate.",
+                                "subjectOf": {
+                                    "@id": "#recipe-tumbet"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Restaurant",
+            "@id": "#restaurant-alcudia",
+            "name": "Foc i Oli (Alcúdia)",
+            "description": "Restaurante de cocina típica de Mallorca con platos de recetas clásicas y producto local.",
+            "url": "https://tu-dominio.com/restaurantes/foc-i-oli-alcudia",
+            "telephone": "+34 600 000 003",
+            "image": [
+                "https://tu-dominio.com/imagenes/restaurantes/foc-i-oli-alcudia.jpg"
+            ],
+            "priceRange": "€€",
+            "servesCuisine": [
+                "Mallorquina"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Avinguda Exemple 3",
+                "addressLocality": "Alcúdia",
+                "addressRegion": "Illes Balears",
+                "postalCode": "07400",
+                "addressCountry": "ES"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 39.8522,
+                "longitude": 3.1214
+            },
+            "hasMap": "https://www.openstreetmap.org/?mlat=39.8522&mlon=3.1214#map=18/39.8522/3.1214",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "opens": "13:00",
+                    "closes": "22:30"
+                }
+            ],
+            "hasMenu": {
+                "@type": "Menu",
+                "@id": "#menu-alcudia",
+                "name": "Carta",
+                "hasMenuSection": [
+                    {
+                        "@type": "MenuSection",
+                        "name": "Especialidades mallorquinas",
+                        "hasMenuItem": [
+                            {
+                                "@type": "MenuItem",
+                                "name": "Frito mallorquín",
+                                "description": "Salteado tradicional aromatizado con hinojo.",
+                                "subjectOf": {
+                                    "@id": "#recipe-frito-mallorquin"
+                                }
+                            },
+                            {
+                                "@type": "MenuItem",
+                                "name": "Coca de trampó",
+                                "description": "Coca salada con trampó.",
+                                "subjectOf": {
+                                    "@id": "#recipe-coca-de-trampo"
+                                }
+                            },
+                            {
+                                "@type": "MenuItem",
+                                "name": "Ensaimada mallorquina",
+                                "description": "Postre típico mallorquín.",
+                                "subjectOf": {
+                                    "@id": "#recipe-ensaimada"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

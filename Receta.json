@@ -3,6 +3,23 @@
     "@graph": [
         {
             "@type": "Recipe",
+            "@id": "#recipe-pa-amb-oli",
+            "url": "https://tu-dominio.com/recetas/pa-amb-oli",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/pa-amb-oli.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Pa amb oli (Mallorca)",
+                "description": "Cómo preparar pa amb oli paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/pa-amb-oli.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/pa-amb-oli.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/pa-amb-oli",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT1M"
+            },
             "name": "Pa amb oli (Mallorca)",
             "author": {
                 "@type": "Organization",
@@ -47,6 +64,23 @@
         },
         {
             "@type": "Recipe",
+            "@id": "#recipe-tumbet",
+            "url": "https://tu-dominio.com/recetas/tumbet",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/tumbet.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Tumbet mallorquín",
+                "description": "Cómo preparar tumbet mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/tumbet.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/tumbet.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/tumbet",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT2M"
+            },
             "name": "Tumbet mallorquín",
             "author": {
                 "@type": "Organization",
@@ -96,6 +130,23 @@
         },
         {
             "@type": "Recipe",
+            "@id": "#recipe-frito-mallorquin",
+            "url": "https://tu-dominio.com/recetas/frito-mallorquin",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/frito-mallorquin.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Frito mallorquín",
+                "description": "Cómo preparar frito mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/frito-mallorquin.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/frito-mallorquin.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/frito-mallorquin",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT3M"
+            },
             "name": "Frito mallorquín",
             "author": {
                 "@type": "Organization",
@@ -144,6 +195,23 @@
         },
         {
             "@type": "Recipe",
+            "@id": "#recipe-coca-de-trampo",
+            "url": "https://tu-dominio.com/recetas/coca-de-trampo",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/coca-de-trampo.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Coca de trampó",
+                "description": "Cómo preparar coca de trampó paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/coca-de-trampo.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/coca-de-trampo.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/coca-de-trampo",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT2M"
+            },
             "name": "Coca de trampó",
             "author": {
                 "@type": "Organization",
@@ -190,6 +258,23 @@
         },
         {
             "@type": "Recipe",
+            "@id": "#recipe-ensaimada",
+            "url": "https://tu-dominio.com/recetas/ensaimada",
+            "image": [
+                "https://tu-dominio.com/imagenes/recetas/ensaimada.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Ensaimada mallorquina (casera)",
+                "description": "Cómo preparar ensaimada mallorquina casera paso a paso.",
+                "thumbnailUrl": [
+                    "https://tu-dominio.com/imagenes/videos/ensaimada.jpg"
+                ],
+                "contentUrl": "https://tu-dominio.com/videos/ensaimada.mp4",
+                "embedUrl": "https://tu-dominio.com/videos/ensaimada",
+                "uploadDate": "2026-03-03T12:00:00Z",
+                "duration": "PT4M"
+            },
             "name": "Ensaimada mallorquina (casera)",
             "author": {
                 "@type": "Organization",
