@@ -11,6 +11,48 @@
 .navbar.scrolled .navbar-toggler-icon {
   color: #222 !important;
 }
+
+/* A11y: foco visible consistente para navegacion por teclado */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #1f6feb !important;
+  outline-offset: 2px;
+}
+
+/* Tarjetas de creadores sin estilos inline */
+.creator-card {
+  background: #fff;
+  border-radius: 12px;
+}
+
+.creator-avatar {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+
+.creator-link-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  z-index: 2000;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
 /*!
 =========================================================
 * Creative Design Landing page V 1.0
@@ -11189,7 +11231,7 @@ nav.page-navbar.affix .navbar-brand .text-dark {
 }
 
 .header {
-  background: #efefef url(../imgs/header.jpg);
+  background: #efefef url(../media/img1.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -11228,6 +11270,11 @@ nav.page-navbar.affix .navbar-brand .text-dark {
 }
 
 .header .header-content h6 {
+  margin-bottom: 25px;
+  font-size: calc(35px + (60 - 35) * ((100vw - 300px) / (1200 - 300)));
+}
+
+.header .header-content h1 {
   margin-bottom: 25px;
   font-size: calc(35px + (60 - 35) * ((100vw - 300px) / (1200 - 300)));
 }
@@ -11285,7 +11332,7 @@ section.p-md {
 }
 
 section.has-bg-img {
-  background-image: url(../imgs/bg-img-1.jpg);
+  background-image: url(../media/img1.jpg);
   background-size: cover;
   background-position: center;
   min-height: 450px;

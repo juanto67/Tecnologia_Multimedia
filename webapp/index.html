@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,10 +8,10 @@
     <title>Sabors de Mallorca</title>
 
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body data-spy="scroll" data-target=".navbar" data-offset="40">
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
     
     <!-- Page Navbar -->
     <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
@@ -46,12 +46,14 @@
         </div>
     </nav><!-- End of Page Navbar -->   
 
+    <main id="main-content">
+
     <!-- Page Header -->
     <header id="home" class="header">
         <div class="overlay"></div>
         <div class="header-content">
             <p>Lorem ipsum dolor sit amet.</p>
-            <h6>Creative Design</h6> 
+            <h1>Creative Design</h1>
             <button class="btn btn-outline-light">Download Now</button> 
         </div>      
     </header><!-- End of Page Header -->    
@@ -80,7 +82,7 @@
     <section class="has-bg-img" id="features">
         <div class="overlay"></div>
         <!-- Button trigger modal -->
-        <a data-toggle="modal" href="#exampleModalCenter">
+        <a data-toggle="modal" href="#exampleModalCenter" role="button" aria-label="Abrir video de presentación">
             <i></i>
         </a>
 
@@ -88,7 +90,9 @@
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
+                    <h2 id="exampleModalCenterTitle" class="sr-only">Video de presentación</h2>
                      <iframe width="100%" height="450px" class="border-0" 
+                    title="Video de presentación de Sabors de Mallorca"
                     src="https://www.youtube.com/embed/tgbNyZ7vqY?controls=0">
                     </iframe>
                 </div>
@@ -105,6 +109,14 @@
         </div><!-- End of Cotanier -->  
     </section><!-- End of Testmonial Section -->
 
+    <!-- Contact Section -->
+    <section id="contact" class="text-center p-md">
+        <div class="container">
+            <h2 class="mb-3">Contacto</h2>
+            <p class="mb-0">Escríbenos para colaborar, proponer mejoras o compartir nuevas recetas de Mallorca.</p>
+        </div>
+    </section>
+
     
 
     <!-- Section -->
@@ -116,23 +128,23 @@
             <div class="pre-footer">
                 <div class="row justify-content-center">
                     <div class="col-sm-10 col-md-4 m-auto">
-                        <div class="testmonial-wrapper text-center p-4 shadow-sm" style="background:#fff;border-radius:12px;">
-                            <img src="media/creator1.jpg" alt="Juan Martínez" class="img-fluid rounded-circle mb-3" style="width:110px;height:110px;object-fit:cover;">
+                        <div class="testmonial-wrapper creator-card text-center p-4 shadow-sm">
+                            <img src="media/creator1.jpg" alt="Juan Martínez" class="img-fluid rounded-circle mb-3 creator-avatar">
                             <h6 class="title mb-1">Juan Martínez</h6>
                             <p class="text-muted mb-1">Desarrollador Web</p>
                             <a href="https://www.linkedin.com/in/juan-martinez" target="_blank" rel="noopener" class="d-inline-block mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;"> LinkedIn
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="creator-link-icon"> LinkedIn
                             </a>
                             <p class="small mt-2">Apasionado por la tecnología y el desarrollo de aplicaciones web. Encargado de la integración y la lógica de la web.</p>
                         </div>
                     </div>
                     <div class="col-sm-10 col-md-4 m-auto">
-                        <div class="testmonial-wrapper text-center p-4 shadow-sm" style="background:#fff;border-radius:12px;">
-                            <img src="media/creator2.jpg" alt="María López" class="img-fluid rounded-circle mb-3" style="width:110px;height:110px;object-fit:cover;">
+                        <div class="testmonial-wrapper creator-card text-center p-4 shadow-sm">
+                            <img src="media/creator2.jpg" alt="María López" class="img-fluid rounded-circle mb-3 creator-avatar">
                             <h6 class="title mb-1">María López</h6>
                             <p class="text-muted mb-1">Diseñadora UI/UX</p>
                             <a href="https://www.linkedin.com/in/maria-lopez" target="_blank" rel="noopener" class="d-inline-block mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:24px;height:24px;vertical-align:middle;"> LinkedIn
+                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="creator-link-icon"> LinkedIn
                             </a>
                             <p class="small mt-2">Especialista en diseño de interfaces y experiencia de usuario. Responsable de la imagen visual y la usabilidad del sitio.</p>
                         </div>
@@ -147,6 +159,8 @@
             
         </div><!--End of Container -->      
     </section><!-- End of Section -->
+
+    </main>
 
 
 
@@ -164,6 +178,5 @@ window.addEventListener('scroll', function() {
 
 </script>
 <script src="js/main.js"></script>
-</script>
 </body>
 </html>

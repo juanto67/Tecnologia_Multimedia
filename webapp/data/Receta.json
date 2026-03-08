@@ -4,19 +4,21 @@
         {
             "@type": "Recipe",
             "@id": "#recipe-pa-amb-oli",
-            "url": "https://tu-dominio.com/recetas/pa-amb-oli",
+            "url": "https://www.saborsdemallorca.online/recetas/pa-amb-oli",
             "image": [
-                "https://tu-dominio.com/imagenes/recetas/pa-amb-oli.jpg"
+                "https://www.saborsdemallorca.online/img/pa-amb-oli/1.jpg",
+                "https://www.saborsdemallorca.online/img/pa-amb-oli/2.jpg",
+                "https://www.saborsdemallorca.online/img/pa-amb-oli/3.jpg"
             ],
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Pa amb oli (Mallorca)",
                 "description": "Cómo preparar pa amb oli paso a paso.",
                 "thumbnailUrl": [
-                    "https://tu-dominio.com/imagenes/videos/pa-amb-oli.jpg"
+                    "https://www.saborsdemallorca.online/img/pa-amb-oli/1.jpg"
                 ],
-                "contentUrl": "https://tu-dominio.com/videos/pa-amb-oli.mp4",
-                "embedUrl": "https://tu-dominio.com/videos/pa-amb-oli",
+                "contentUrl": "https://www.saborsdemallorca.online/videos/pa-amb-oli.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/pa-amb-oli",
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT1M"
             },
@@ -65,19 +67,21 @@
         {
             "@type": "Recipe",
             "@id": "#recipe-tumbet",
-            "url": "https://tu-dominio.com/recetas/tumbet",
+            "url": "https://www.saborsdemallorca.online/recetas/tumbet",
             "image": [
-                "https://tu-dominio.com/imagenes/recetas/tumbet.jpg"
+                "https://www.saborsdemallorca.online/img/tumbet/1.jpg",
+                "https://www.saborsdemallorca.online/img/tumbet/2.jpg",
+                "https://www.saborsdemallorca.online/img/tumbet/3.jpg"
             ],
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Tumbet mallorquín",
                 "description": "Cómo preparar tumbet mallorquín paso a paso.",
                 "thumbnailUrl": [
-                    "https://tu-dominio.com/imagenes/videos/tumbet.jpg"
+                    "https://www.saborsdemallorca.online/img/tumbet/1.jpg"
                 ],
-                "contentUrl": "https://tu-dominio.com/videos/tumbet.mp4",
-                "embedUrl": "https://tu-dominio.com/videos/tumbet",
+                "contentUrl": "https://www.saborsdemallorca.online/videos/tumbet.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/tumbet",
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT2M"
             },
@@ -131,19 +135,21 @@
         {
             "@type": "Recipe",
             "@id": "#recipe-frito-mallorquin",
-            "url": "https://tu-dominio.com/recetas/frito-mallorquin",
+            "url": "https://www.saborsdemallorca.online/recetas/frito-mallorquin",
             "image": [
-                "https://tu-dominio.com/imagenes/recetas/frito-mallorquin.jpg"
+                "https://www.saborsdemallorca.online/img/frito-mallorquin/1.jpg",
+                "https://www.saborsdemallorca.online/img/frito-mallorquin/2.jpg",
+                "https://www.saborsdemallorca.online/img/frito-mallorquin/3.jpg"
             ],
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Frito mallorquín",
                 "description": "Cómo preparar frito mallorquín paso a paso.",
                 "thumbnailUrl": [
-                    "https://tu-dominio.com/imagenes/videos/frito-mallorquin.jpg"
+                    "https://www.saborsdemallorca.online/img/frito-mallorquin/1.jpg"
                 ],
-                "contentUrl": "https://tu-dominio.com/videos/frito-mallorquin.mp4",
-                "embedUrl": "https://tu-dominio.com/videos/frito-mallorquin",
+                "contentUrl": "https://www.saborsdemallorca.online/videos/frito-mallorquin.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/frito-mallorquin",
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT3M"
             },
@@ -196,19 +202,21 @@
         {
             "@type": "Recipe",
             "@id": "#recipe-coca-de-trampo",
-            "url": "https://tu-dominio.com/recetas/coca-de-trampo",
+            "url": "https://www.saborsdemallorca.online/recetas/coca-de-trampo",
             "image": [
-                "https://tu-dominio.com/imagenes/recetas/coca-de-trampo.jpg"
+                "https://www.saborsdemallorca.online/img/coca-de-trampo/1.jpg",
+                "https://www.saborsdemallorca.online/img/coca-de-trampo/2.jpg",
+                "https://www.saborsdemallorca.online/img/coca-de-trampo/3.jpg"
             ],
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Coca de trampó",
                 "description": "Cómo preparar coca de trampó paso a paso.",
                 "thumbnailUrl": [
-                    "https://tu-dominio.com/imagenes/videos/coca-de-trampo.jpg"
+                    "https://www.saborsdemallorca.online/img/coca-de-trampo/1.jpg"
                 ],
-                "contentUrl": "https://tu-dominio.com/videos/coca-de-trampo.mp4",
-                "embedUrl": "https://tu-dominio.com/videos/coca-de-trampo",
+                "contentUrl": "https://www.saborsdemallorca.online/videos/coca-de-trampo.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/coca-de-trampo",
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT2M"
             },
@@ -259,19 +267,21 @@
         {
             "@type": "Recipe",
             "@id": "#recipe-ensaimada",
-            "url": "https://tu-dominio.com/recetas/ensaimada",
+            "url": "https://www.saborsdemallorca.online/recetas/ensaimada",
             "image": [
-                "https://tu-dominio.com/imagenes/recetas/ensaimada.jpg"
+                "https://www.saborsdemallorca.online/img/ensaimada/1.jpg",
+                "https://www.saborsdemallorca.online/img/ensaimada/2.jpg",
+                "https://www.saborsdemallorca.online/img/ensaimada/3.jpg"
             ],
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Ensaimada mallorquina (casera)",
                 "description": "Cómo preparar ensaimada mallorquina casera paso a paso.",
                 "thumbnailUrl": [
-                    "https://tu-dominio.com/imagenes/videos/ensaimada.jpg"
+                    "https://www.saborsdemallorca.online/img/ensaimada/1.jpg"
                 ],
-                "contentUrl": "https://tu-dominio.com/videos/ensaimada.mp4",
-                "embedUrl": "https://tu-dominio.com/videos/ensaimada",
+                "contentUrl": "https://www.saborsdemallorca.online/videos/ensaimada.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/ensaimada",
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT4M"
             },
