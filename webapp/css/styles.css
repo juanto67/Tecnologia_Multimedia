@@ -11242,6 +11242,32 @@ nav.page-navbar.affix .navbar-brand .text-dark {
   position: relative;
 }
 
+.header .header-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.header .header-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.header .header-slide.is-active {
+  opacity: 1;
+}
+
 .header .overlay {
   position: absolute;
   top: 0;
@@ -11249,6 +11275,7 @@ nav.page-navbar.affix .navbar-brand .text-dark {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .header .header-content {
@@ -11260,6 +11287,7 @@ nav.page-navbar.affix .navbar-brand .text-dark {
           transform: translateY(-50%);
   text-align: ‌ center;
   color: #fff;
+  z-index: 2;
 }
 
 .header .header-content p {

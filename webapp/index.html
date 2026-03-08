@@ -50,10 +50,11 @@
 
     <!-- Page Header -->
     <header id="home" class="header">
+        <div class="header-slides" id="header-slides" aria-hidden="true"></div>
         <div class="overlay"></div>
         <div class="header-content">
-            <p>Lorem ipsum dolor sit amet.</p>
-            <h1>Creative Design</h1>
+            <p>Sabores tradicionales de Mallorca</p>
+            <h1 id="header-slide-title">Sabors de Mallorca</h1>
             <button class="btn btn-outline-light">Download Now</button> 
         </div>      
     </header><!-- End of Page Header -->    
@@ -162,21 +163,6 @@
 
     </main>
 
-
-
-
-<script>
-// Cambia la cabecera a blanco al hacer scroll
-window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-    if (window.scrollY > 20) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-</script>
 <script src="js/main.js"></script>
 </body>
 </html>
