@@ -12,14 +12,31 @@ function cambiarNavbarEnScroll() {
 function escogerImagenAleatoria(imagenes) {
 	if (Array.isArray(imagenes) && imagenes.length > 0) {
 		var indice = Math.floor(Math.random() * imagenes.length);
-		return imagenes[indice];
+		return normalizarRutaImagen(imagenes[indice]);
 	}
 
 	if (typeof imagenes === 'string' && imagenes.trim() !== '') {
-		return imagenes;
+		return normalizarRutaImagen(imagenes);
 	}
 
 	return null;
+}
+
+function normalizarRutaImagen(rutaImagen) {
+	if (typeof rutaImagen !== 'string') return null;
+
+	var ruta = rutaImagen.trim();
+	if (!ruta) return null;
+
+	var marcadorImg = '/img/';
+	var indiceImg = ruta.indexOf(marcadorImg);
+
+	// Convierte URLs absolutas del JSON a rutas locales para evitar diferencias entre entornos.
+	if (indiceImg !== -1) {
+		return 'img/' + ruta.substring(indiceImg + marcadorImg.length);
+	}
+
+	return ruta;
 }
 
 function pintarGaleria(recetas) {
@@ -97,8 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	window.addEventListener('scroll', cambiarNavbarEnScroll);
 	cambiarNavbarEnScroll();
 
-	fetch('public/webapp/data/Receta.json')
+	fetch('data/Receta.json')
 		.then(function(response) {
+			if (!response.ok) {
+				throw new Error('HTTP ' + response.status);
+			}
+
 			return response.json();
 		})
 		.then(function(data) {
@@ -107,6 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			iniciarSliderHeader(recetas);
 		})
 		.catch(function(error) {
-			console.error('No se pudo cargar public/webapp/data/Receta.json:', error);
+			console.error('No se pudo cargar data/Receta.json:', error);
 		});
 });
