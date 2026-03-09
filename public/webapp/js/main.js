@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	window.addEventListener('scroll', cambiarNavbarEnScroll);
 	cambiarNavbarEnScroll();
 
-	fetch('data/Receta.json')
+	fetch('public/webapp/data/Receta.json')
 		.then(function(response) {
 			return response.json();
 		})
@@ -107,6 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			iniciarSliderHeader(recetas);
 		})
 		.catch(function(error) {
-			console.error('No se pudo cargar data/Receta.json:', error);
+			console.error('No se pudo cargar public/webapp/data/Receta.json:', error);
 		});
 });
