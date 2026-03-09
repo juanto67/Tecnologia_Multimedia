@@ -110,24 +110,47 @@ function iniciarSliderHeader(recetas) {
 	}, 5000);
 }
 
+function cargarRecetasConFallback() {
+	var rutas = [
+		'data/Receta.json',
+		'webapp/data/Receta.json',
+		'public/webapp/data/Receta.json'
+	];
+
+	function intentarRuta(indice) {
+		if (indice >= rutas.length) {
+			return Promise.reject(new Error('No se pudo cargar Receta.json en ninguna ruta conocida'));
+		}
+
+	var ruta = rutas[indice];
+
+		return fetch(ruta)
+			.then(function(response) {
+				if (!response.ok) {
+					throw new Error('HTTP ' + response.status + ' en ' + ruta);
+				}
+
+				return response.json();
+			})
+			.catch(function() {
+				return intentarRuta(indice + 1);
+			});
+	}
+
+	return intentarRuta(0);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 	window.addEventListener('scroll', cambiarNavbarEnScroll);
 	cambiarNavbarEnScroll();
 
-	fetch('data/Receta.json')
-		.then(function(response) {
-			if (!response.ok) {
-				throw new Error('HTTP ' + response.status);
-			}
-
-			return response.json();
-		})
+	cargarRecetasConFallback()
 		.then(function(data) {
 			var recetas = data['@graph'] || [];
 			pintarGaleria(recetas);
 			iniciarSliderHeader(recetas);
 		})
 		.catch(function(error) {
-			console.error('No se pudo cargar data/Receta.json:', error);
+			console.error('No se pudo cargar Receta.json:', error);
 		});
 });
