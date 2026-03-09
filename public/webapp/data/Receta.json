@@ -41,6 +41,8 @@
                 "2 tomates de colgar (o tomates maduros)",
                 "Aceite de oliva virgen extra",
                 "Sal",
+                "Aceitunas (opcional)",
+                "Pepinillos (opcional)",
                 "Opcional: sobrasada", 
                 "Opcional: jamón serrano",
                 "Opcional: queso mahonés"
@@ -105,6 +107,8 @@
                 "2 pimientos rojos (o 1 rojo y 1 verde)",
                 "4 tomates maduros (o 400 g de tomate triturado)",
                 "2 dientes de ajo",
+                "1 hoja de laurel",
+                "Azúcar (una pizca para corregir acidez, opcional)",
                 "Aceite de oliva (para freír y para la salsa)",
                 "Sal",
                 "Pimienta (opcional)"
@@ -175,6 +179,8 @@
                 "2 dientes de ajo",
                 "300 g de carne (cerdo o cordero) o mezcla con hígado (opcional)",
                 "150 g de guisantes (opcional)",
+                "1 guindilla seca (opcional)",
+                "Perejil fresco",
                 "Hinojo fresco (o semillas de hinojo, al gusto)",
                 "Aceite de oliva",
                 "Sal",
@@ -242,6 +248,8 @@
                 "2 tomates maduros",
                 "1 pimiento verde",
                 "1 cebolla",
+                "1 pimiento rojo (opcional)",
+                "Pimentón dulce (opcional)",
                 "Aceite de oliva virgen extra",
                 "Sal"
             ],
@@ -306,6 +314,8 @@
                 "120 ml de leche templada",
                 "7 g de levadura seca de panadería (o 20 g fresca)",
                 "1 pizca de sal",
+                "1 cucharadita de agua de azahar (opcional)",
+                "1 cucharada de mantequilla (opcional)",
                 "Manteca de cerdo (saïm), para untar",
                 "Azúcar glas, para espolvorear"
             ],
@@ -329,6 +339,731 @@
                 {
                     "@type": "HowToStep",
                     "text": "Hornea a 180 °C 15–20 min, hasta dorar. Enfría y espolvorea azúcar glas."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-arros-brut",
+            "url": "https://www.saborsdemallorca.online/recetas/arros-brut",
+            "image": [
+                "https://www.saborsdemallorca.online/img/arros-brut/1.jpg",
+                "https://www.saborsdemallorca.online/img/arros-brut/2.jpg",
+                "https://www.saborsdemallorca.online/img/arros-brut/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Arròs brut mallorquín",
+                "description": "Cómo preparar arròs brut mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/arros-brut/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/arros-brut.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/arros-brut",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Arròs brut mallorquín",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Arroz caldoso y especiado con carne, setas y verduras. Uno de los platos más emblemáticos de Mallorca.",
+            "prepTime": "PT25M",
+            "cookTime": "PT45M",
+            "totalTime": "PT1H10M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, arròs brut, arroz caldoso, tradicional",
+            "recipeIngredient": [
+                "320 g de arroz",
+                "300 g de pollo troceado",
+                "200 g de conejo troceado",
+                "150 g de setas",
+                "1 cebolla",
+                "1 pimiento verde",
+                "2 tomates maduros",
+                "2 dientes de ajo",
+                "1 puñado de guisantes",
+                "1 cucharadita de canela",
+                "1 cucharadita de clavo molido",
+                "Caldo o agua",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta",
+                "Especias para arròs brut"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Sofríe la cebolla, el ajo y el tomate en una cazuela amplia."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Añade las carnes y dóralas bien junto con las setas."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Incorpora las especias, los guisantes y el caldo; deja cocer unos minutos."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Agrega el arroz y cocina hasta que quede meloso y caldoso, ajustando de sal."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-sopes-mallorquines",
+            "url": "https://www.saborsdemallorca.online/recetas/sopes-mallorquines",
+            "image": [
+                "https://www.saborsdemallorca.online/img/sopes-mallorquines/1.jpg",
+                "https://www.saborsdemallorca.online/img/sopes-mallorquines/2.jpg",
+                "https://www.saborsdemallorca.online/img/sopes-mallorquines/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Sopes mallorquines",
+                "description": "Cómo preparar sopes mallorquines paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/sopes-mallorquines/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/sopes-mallorquines.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/sopes-mallorquines",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Sopes mallorquines",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Plato de aprovechamiento con rebanadas finas de pan moreno y verduras de temporada.",
+            "prepTime": "PT20M",
+            "cookTime": "PT40M",
+            "totalTime": "PT1H",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, sopes mallorquines, pan moreno, verduras",
+            "recipeIngredient": [
+                "300 g de col",
+                "2 cebollas tiernas",
+                "1 pimiento verde",
+                "2 tomates",
+                "2 alcachofas (opcional)",
+                "150 g de guisantes",
+                "200 g de setas (opcional)",
+                "1 manojo de ajos tiernos",
+                "Coliflor (opcional)",
+                "Pan moreno en rebanadas finas",
+                "Caldo de verduras",
+                "Aceite de oliva",
+                "Sal",
+                "Pimentón"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Sofríe cebolla, pimiento y tomate; añade las verduras troceadas."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Incorpora caldo justo para cocer las verduras sin exceso de líquido."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Dispón capas de pan moreno en una cazuela y cubre con el guiso."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Deja reposar unos minutos para que el pan absorba el caldo y sirve caliente."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-lomo-con-col",
+            "url": "https://www.saborsdemallorca.online/recetas/lomo-con-col",
+            "image": [
+                "https://www.saborsdemallorca.online/img/lomo-con-col/1.jpg",
+                "https://www.saborsdemallorca.online/img/lomo-con-col/2.jpg",
+                "https://www.saborsdemallorca.online/img/lomo-con-col/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Lomo con col",
+                "description": "Cómo preparar lomo con col mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/lomo-con-col/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/lomo-con-col.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/lomo-con-col",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Lomo con col",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Paquetes de col rellenos de lomo y sobrasada, guisados en salsa de tomate y vino.",
+            "prepTime": "PT35M",
+            "cookTime": "PT55M",
+            "totalTime": "PT1H30M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, lomo con col, sobrasada, col",
+            "recipeIngredient": [
+                "8 hojas grandes de col",
+                "8 filetes de lomo de cerdo",
+                "Sobrasada",
+                "Panceta en lonchas",
+                "1 cebolla",
+                "2 tomates maduros",
+                "1 vaso de vino blanco",
+                "1 hoja de laurel",
+                "Perejil",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Escalda las hojas de col y resérvalas."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Rellena cada hoja con lomo, sobrasada y panceta; forma paquetes y átales si hace falta."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sofríe cebolla y tomate, añade vino y coloca los paquetes en la cazuela."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Cocina a fuego medio hasta que la carne esté tierna y la salsa reduzca."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-panades-mallorquines",
+            "url": "https://www.saborsdemallorca.online/recetas/panades-mallorquines",
+            "image": [
+                "https://www.saborsdemallorca.online/img/panades-mallorquines/1.jpg",
+                "https://www.saborsdemallorca.online/img/panades-mallorquines/2.jpg",
+                "https://www.saborsdemallorca.online/img/panades-mallorquines/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Panades mallorquinas",
+                "description": "Cómo preparar panades mallorquinas paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/panades-mallorquines/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/panades-mallorquines.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/panades-mallorquines",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT4M"
+            },
+            "name": "Panades mallorquinas",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Empanadas típicas de Pascua rellenas de carne, guisantes y sobrasada.",
+            "prepTime": "PT45M",
+            "cookTime": "PT40M",
+            "totalTime": "PT1H25M",
+            "recipeYield": "8 panades",
+            "recipeCategory": "Entrante",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, panades, empanadas, pascua",
+            "recipeIngredient": [
+                "500 g de harina",
+                "150 ml de aceite de oliva",
+                "150 ml de agua",
+                "1 pizca de sal",
+                "400 g de carne de cordero o cerdo en dados",
+                "200 g de guisantes",
+                "Sobrasada",
+                "Cebolleta picada (opcional)",
+                "Menta fresca (opcional)",
+                "Pimienta",
+                "Pimentón"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Prepara la masa mezclando harina, aceite, agua y sal."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Forma cestas de masa y rellénalas con carne, guisantes y un poco de sobrasada."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Cierra con tapa de masa y sella bien los bordes."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea a 190 °C hasta que estén doradas."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-trempo",
+            "url": "https://www.saborsdemallorca.online/recetas/trempo",
+            "image": [
+                "https://www.saborsdemallorca.online/img/trempo/1.jpg",
+                "https://www.saborsdemallorca.online/img/trempo/2.jpg",
+                "https://www.saborsdemallorca.online/img/trempo/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Trempó mallorquín",
+                "description": "Cómo preparar trempó mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/trempo/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/trempo.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/trempo",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT2M"
+            },
+            "name": "Trempó mallorquín",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Ensalada fresca de tomate, pimiento y cebolla, aliñada con aceite de oliva y sal.",
+            "prepTime": "PT15M",
+            "cookTime": "PT0M",
+            "totalTime": "PT15M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Entrante",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, trempó, ensalada, verano",
+            "recipeIngredient": [
+                "4 tomates maduros",
+                "1 pimiento verde",
+                "1 pimiento rojo",
+                "1 cebolla tierna",
+                "Atún en conserva (opcional)",
+                "Alcaparras (opcional)",
+                "Aceite de oliva virgen extra",
+                "Sal"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Lava y corta en dados pequeños tomate, pimientos y cebolla."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mezcla las verduras en un bol amplio."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Aliña con sal y aceite de oliva al gusto."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-frito-pulpo",
+            "url": "https://www.saborsdemallorca.online/recetas/frito-de-pulpo",
+            "image": [
+                "https://www.saborsdemallorca.online/img/frito-de-pulpo/1.jpg",
+                "https://www.saborsdemallorca.online/img/frito-de-pulpo/2.jpg",
+                "https://www.saborsdemallorca.online/img/frito-de-pulpo/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Frito de pulpo mallorquín",
+                "description": "Cómo preparar frito de pulpo mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/frito-de-pulpo/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/frito-de-pulpo.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/frito-de-pulpo",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Frito de pulpo mallorquín",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Variante marinera del frito, con pulpo, patata y verduras salteadas.",
+            "prepTime": "PT30M",
+            "cookTime": "PT35M",
+            "totalTime": "PT1H5M",
+            "recipeYield": "4 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, frito de pulpo, pulpo, patata",
+            "recipeIngredient": [
+                "1 kg de pulpo cocido",
+                "500 g de patatas",
+                "1 pimiento rojo",
+                "1 pimiento verde",
+                "1 cebolla",
+                "2 dientes de ajo",
+                "Hinojo",
+                "Pimentón dulce",
+                "Limón (opcional)",
+                "Aceite de oliva",
+                "Sal",
+                "Pimienta"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Fríe las patatas en dados y resérvalas."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sofríe cebolla, pimientos y ajo en una sartén amplia."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Añade el pulpo troceado y saltea unos minutos."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Incorpora patatas e hinojo, mezcla bien y corrige de sal y pimienta."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-porcella-rostida",
+            "url": "https://www.saborsdemallorca.online/recetas/porcella-rostida",
+            "image": [
+                "https://www.saborsdemallorca.online/img/porcella-rostida/1.jpg",
+                "https://www.saborsdemallorca.online/img/porcella-rostida/2.jpg",
+                "https://www.saborsdemallorca.online/img/porcella-rostida/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Porcella rostida",
+                "description": "Cómo preparar porcella rostida mallorquina paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/porcella-rostida/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/porcella-rostida.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/porcella-rostida",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT4M"
+            },
+            "name": "Porcella rostida",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Cochinillo asado al horno con piel crujiente, típico de celebraciones familiares.",
+            "prepTime": "PT20M",
+            "cookTime": "PT2H30M",
+            "totalTime": "PT2H50M",
+            "recipeYield": "6 raciones",
+            "recipeCategory": "Plato principal",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, porcella rostida, cochinillo, horno",
+            "recipeIngredient": [
+                "1 cochinillo pequeño",
+                "Manteca de cerdo",
+                "3 dientes de ajo",
+                "1 limón",
+                "Romero",
+                "Tomillo",
+                "Sal",
+                "Pimienta",
+                "Patatas para acompañar (opcional)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Precalienta el horno a temperatura media-alta."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Unta el cochinillo con manteca, ajo, limón, sal y pimienta."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea lentamente hasta que la carne esté tierna."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Sube la temperatura final para dorar y dejar la piel crujiente."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-gato-almendra",
+            "url": "https://www.saborsdemallorca.online/recetas/gato-de-almendra",
+            "image": [
+                "https://www.saborsdemallorca.online/img/gato-de-almendra/1.jpg",
+                "https://www.saborsdemallorca.online/img/gato-de-almendra/2.jpg",
+                "https://www.saborsdemallorca.online/img/gato-de-almendra/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Gató de almendra",
+                "description": "Cómo preparar gató de almendra mallorquín paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/gato-de-almendra/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/gato-de-almendra.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/gato-de-almendra",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Gató de almendra",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Bizcocho tradicional de almendra, muy común en la repostería mallorquina.",
+            "prepTime": "PT20M",
+            "cookTime": "PT35M",
+            "totalTime": "PT55M",
+            "recipeYield": "8 raciones",
+            "recipeCategory": "Postre",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, gató, almendra, postre",
+            "recipeIngredient": [
+                "250 g de almendra molida",
+                "220 g de azúcar",
+                "6 huevos",
+                "Ralladura de limón",
+                "1 pizca de canela (opcional)",
+                "Mantequilla para el molde",
+                "Helado de almendra o vainilla para acompañar (opcional)",
+                "Azúcar glas para decorar"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Separa claras y yemas; monta las claras a punto de nieve."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Mezcla yemas con azúcar, almendra y ralladura de limón."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Integra las claras con movimientos envolventes."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea a 170 °C hasta que esté cocido y espolvorea azúcar glas al enfriar."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-rubiols",
+            "url": "https://www.saborsdemallorca.online/recetas/rubiols",
+            "image": [
+                "https://www.saborsdemallorca.online/img/rubiols/1.jpg",
+                "https://www.saborsdemallorca.online/img/rubiols/2.jpg",
+                "https://www.saborsdemallorca.online/img/rubiols/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Rubiols mallorquines",
+                "description": "Cómo preparar rubiols mallorquines paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/rubiols/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/rubiols.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/rubiols",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Rubiols mallorquines",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Empanadillas dulces de Pascua rellenas de requesón, cabello de ángel o mermelada.",
+            "prepTime": "PT35M",
+            "cookTime": "PT20M",
+            "totalTime": "PT55M",
+            "recipeYield": "16 unidades",
+            "recipeCategory": "Postre",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, rubiols, pascua, dulce",
+            "recipeIngredient": [
+                "500 g de harina",
+                "150 g de manteca de cerdo",
+                "120 g de azúcar",
+                "2 yemas de huevo",
+                "100 ml de zumo de naranja",
+                "Ralladura de limón",
+                "Relleno al gusto: requesón, mermelada o cabello de ángel",
+                "Azúcar glas"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Mezcla harina, manteca, azúcar, yemas y zumo hasta formar una masa suave."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Estira la masa, corta discos y coloca relleno en el centro."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Cierra en media luna y sella los bordes."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea a 180 °C hasta dorar ligeramente y espolvorea azúcar glas."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-crespells",
+            "url": "https://www.saborsdemallorca.online/recetas/crespells",
+            "image": [
+                "https://www.saborsdemallorca.online/img/crespells/1.jpg",
+                "https://www.saborsdemallorca.online/img/crespells/2.jpg",
+                "https://www.saborsdemallorca.online/img/crespells/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Crespells mallorquines",
+                "description": "Cómo preparar crespells mallorquines paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/crespells/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/crespells.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/crespells",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT2M"
+            },
+            "name": "Crespells mallorquines",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Galletas tradicionales mallorquinas con formas variadas, típicas de Semana Santa.",
+            "prepTime": "PT25M",
+            "cookTime": "PT15M",
+            "totalTime": "PT40M",
+            "recipeYield": "30 unidades",
+            "recipeCategory": "Postre",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, crespells, galletas, semana santa",
+            "recipeIngredient": [
+                "500 g de harina",
+                "150 g de azúcar",
+                "150 g de manteca de cerdo",
+                "2 yemas de huevo",
+                "100 ml de zumo de naranja",
+                "Ralladura de limón",
+                "1 cucharadita de vainilla (opcional)"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Mezcla todos los ingredientes hasta formar una masa homogénea."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Estira la masa y corta con moldes de formas."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Coloca las piezas en una bandeja de horno con papel vegetal."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Hornea a 180 °C hasta que empiecen a dorarse por los bordes."
+                }
+            ]
+        },
+        {
+            "@type": "Recipe",
+            "@id": "#recipe-bunyols-patata",
+            "url": "https://www.saborsdemallorca.online/recetas/bunyols-de-patata",
+            "image": [
+                "https://www.saborsdemallorca.online/img/bunyols-de-patata/1.jpg",
+                "https://www.saborsdemallorca.online/img/bunyols-de-patata/2.jpg",
+                "https://www.saborsdemallorca.online/img/bunyols-de-patata/3.jpg"
+            ],
+            "video": {
+                "@type": "VideoObject",
+                "name": "Video: Bunyols de patata",
+                "description": "Cómo preparar bunyols de patata mallorquines paso a paso.",
+                "thumbnailUrl": [
+                    "https://www.saborsdemallorca.online/img/bunyols-de-patata/1.jpg"
+                ],
+                "contentUrl": "https://www.saborsdemallorca.online/videos/bunyols-de-patata.mp4",
+                "embedUrl": "https://www.saborsdemallorca.online/videos/bunyols-de-patata",
+                "uploadDate": "2026-03-04T12:00:00Z",
+                "duration": "PT3M"
+            },
+            "name": "Bunyols de patata",
+            "author": {
+                "@type": "Organization",
+                "name": "Cocina tradicional de Mallorca"
+            },
+            "datePublished": "2026-03-04",
+            "description": "Buñuelos tiernos de patata y boniato, muy populares en fiestas y ferias.",
+            "prepTime": "PT35M",
+            "cookTime": "PT20M",
+            "totalTime": "PT55M",
+            "recipeYield": "20 unidades",
+            "recipeCategory": "Postre",
+            "recipeCuisine": "Mallorquina",
+            "keywords": "mallorca, bunyols, buñuelos, patata",
+            "recipeIngredient": [
+                "250 g de patata cocida",
+                "100 g de boniato cocido",
+                "250 g de harina",
+                "25 g de levadura fresca",
+                "120 ml de agua templada",
+                "Azúcar",
+                "Canela en polvo (opcional)",
+                "Aceite para freír"
+            ],
+            "recipeInstructions": [
+                {
+                    "@type": "HowToStep",
+                    "text": "Tritura patata y boniato cocidos y mezcla con harina y levadura disuelta."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Amasa y deja fermentar hasta que aumente de volumen."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Forma buñuelos con un agujero central y fríelos en aceite caliente."
+                },
+                {
+                    "@type": "HowToStep",
+                    "text": "Escurre y reboza en azúcar antes de servir."
                 }
             ]
         }
