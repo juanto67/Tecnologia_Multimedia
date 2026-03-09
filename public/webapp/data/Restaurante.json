@@ -63,7 +63,7 @@
                             },
                             {
                                 "@type": "MenuItem",
-                                "name": "Tumbet mallorquín",
+                                "name": "Tumbet",
                                 "description": "Verduras con salsa de tomate al estilo tradicional.",
                                 "subjectOf": {
                                     "@id": "#recipe-tumbet"
@@ -71,7 +71,7 @@
                             },
                             {
                                 "@type": "MenuItem",
-                                "name": "Frito mallorquín",
+                                "name": "Frito",
                                 "description": "Salteado con patata, verduras y hinojo.",
                                 "subjectOf": {
                                     "@id": "#recipe-frito-mallorquin"
@@ -85,7 +85,7 @@
                         "hasMenuItem": [
                             {
                                 "@type": "MenuItem",
-                                "name": "Ensaimada mallorquina",
+                                "name": "Ensaimada",
                                 "description": "Ensaimada casera espolvoreada con azúcar glas.",
                                 "subjectOf": {
                                     "@id": "#recipe-ensaimada"
@@ -172,7 +172,7 @@
                         "hasMenuItem": [
                             {
                                 "@type": "MenuItem",
-                                "name": "Tumbet mallorquín",
+                                "name": "Tumbet",
                                 "description": "Plato de verduras con salsa de tomate.",
                                 "subjectOf": {
                                     "@id": "#recipe-tumbet"
@@ -237,7 +237,7 @@
                         "hasMenuItem": [
                             {
                                 "@type": "MenuItem",
-                                "name": "Frito mallorquín",
+                                "name": "Frito",
                                 "description": "Salteado tradicional aromatizado con hinojo.",
                                 "subjectOf": {
                                     "@id": "#recipe-frito-mallorquin"
@@ -253,7 +253,7 @@
                             },
                             {
                                 "@type": "MenuItem",
-                                "name": "Ensaimada mallorquina",
+                                "name": "Ensaimada",
                                 "description": "Postre típico mallorquín.",
                                 "subjectOf": {
                                     "@id": "#recipe-ensaimada"

@@ -77,8 +77,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Tumbet mallorquín",
-                "description": "Cómo preparar tumbet mallorquín paso a paso.",
+                "name": "Video: Tumbet",
+                "description": "Cómo preparar tumbet paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/tumbet/1.jpg"
                 ],
@@ -87,7 +87,7 @@
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT2M"
             },
-            "name": "Tumbet mallorquín",
+            "name": "Tumbet",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -147,8 +147,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Frito mallorquín",
-                "description": "Cómo preparar frito mallorquín paso a paso.",
+                "name": "Video: Frito",
+                "description": "Cómo preparar frito paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/frito-mallorquin/1.jpg"
                 ],
@@ -157,7 +157,7 @@
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT3M"
             },
-            "name": "Frito mallorquín",
+            "name": "Frito",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -283,8 +283,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Ensaimada mallorquina (casera)",
-                "description": "Cómo preparar ensaimada mallorquina casera paso a paso.",
+                "name": "Video: Ensaimada (casera)",
+                "description": "Cómo preparar ensaimada casera paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/ensaimada/1.jpg"
                 ],
@@ -293,7 +293,7 @@
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT4M"
             },
-            "name": "Ensaimada mallorquina (casera)",
+            "name": "Ensaimada (casera)",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -353,8 +353,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Arròs brut mallorquín",
-                "description": "Cómo preparar arròs brut mallorquín paso a paso.",
+                "name": "Video: Arròs brut",
+                "description": "Cómo preparar arròs brut paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/arros-brut/1.jpg"
                 ],
@@ -363,7 +363,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT3M"
             },
-            "name": "Arròs brut mallorquín",
+            "name": "Arròs brut",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -425,8 +425,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Sopes mallorquines",
-                "description": "Cómo preparar sopes mallorquines paso a paso.",
+                "name": "Video: Sopes",
+                "description": "Cómo preparar sopes paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/sopes-mallorquines/1.jpg"
                 ],
@@ -435,7 +435,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT3M"
             },
-            "name": "Sopes mallorquines",
+            "name": "Sopes",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -496,7 +496,7 @@
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Lomo con col",
-                "description": "Cómo preparar lomo con col mallorquín paso a paso.",
+                "description": "Cómo preparar lomo con col paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/lomo-con-col/1.jpg"
                 ],
@@ -563,8 +563,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Panades mallorquinas",
-                "description": "Cómo preparar panades mallorquinas paso a paso.",
+                "name": "Video: Panades",
+                "description": "Cómo preparar panades paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/panades-mallorquines/1.jpg"
                 ],
@@ -573,7 +573,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT4M"
             },
-            "name": "Panades mallorquinas",
+            "name": "Panades",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -630,8 +630,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Trempó mallorquín",
-                "description": "Cómo preparar trempó mallorquín paso a paso.",
+                "name": "Video: Trempó",
+                "description": "Cómo preparar trempó paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/trempo/1.jpg"
                 ],
@@ -640,7 +640,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT2M"
             },
-            "name": "Trempó mallorquín",
+            "name": "Trempó",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -690,8 +690,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Frito de pulpo mallorquín",
-                "description": "Cómo preparar frito de pulpo mallorquín paso a paso.",
+                "name": "Video: Frito de pulpo",
+                "description": "Cómo preparar frito de pulpo paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/frito-de-pulpo/1.jpg"
                 ],
@@ -700,7 +700,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT3M"
             },
-            "name": "Frito de pulpo mallorquín",
+            "name": "Frito de pulpo",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -759,7 +759,7 @@
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Porcella rostida",
-                "description": "Cómo preparar porcella rostida mallorquina paso a paso.",
+                "description": "Cómo preparar porcella rostida paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/porcella-rostida/1.jpg"
                 ],
@@ -824,7 +824,7 @@
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Gató de almendra",
-                "description": "Cómo preparar gató de almendra mallorquín paso a paso.",
+                "description": "Cómo preparar gató de almendra paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/gato-de-almendra/1.jpg"
                 ],
@@ -887,8 +887,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Rubiols mallorquines",
-                "description": "Cómo preparar rubiols mallorquines paso a paso.",
+                "name": "Video: Rubiols",
+                "description": "Cómo preparar rubiols paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/rubiols/1.jpg"
                 ],
@@ -897,7 +897,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT3M"
             },
-            "name": "Rubiols mallorquines",
+            "name": "Rubiols",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -951,8 +951,8 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Crespells mallorquines",
-                "description": "Cómo preparar crespells mallorquines paso a paso.",
+                "name": "Video: Crespells",
+                "description": "Cómo preparar crespells paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/crespells/1.jpg"
                 ],
@@ -961,7 +961,7 @@
                 "uploadDate": "2026-03-04T12:00:00Z",
                 "duration": "PT2M"
             },
-            "name": "Crespells mallorquines",
+            "name": "Crespells",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -1015,7 +1015,7 @@
             "video": {
                 "@type": "VideoObject",
                 "name": "Video: Bunyols de patata",
-                "description": "Cómo preparar bunyols de patata mallorquines paso a paso.",
+                "description": "Cómo preparar bunyols de patata paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/bunyols-de-patata/1.jpg"
                 ],
