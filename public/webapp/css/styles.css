@@ -66,6 +66,25 @@ textarea:focus {
   font-weight: 500;
 }
 
+.galeria-filtro-nombre-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.galeria-filtro-nombre {
+  width: 100%;
+  max-width: 460px;
+  border: 1px solid #f0c200;
+  background: #fffdf0;
+  color: #5a4a00;
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+.galeria-filtro-nombre::placeholder {
+  color: #8b7b3a;
+}
+
 .filtro-btn {
   border: 1px solid #f0c200;
   background: #fff8d6;

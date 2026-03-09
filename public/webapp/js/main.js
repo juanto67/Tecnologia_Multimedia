@@ -12,7 +12,8 @@ function cambiarNavbarEnScroll() {
 var estadoGaleria = {
 	recetas: [],
 	filtroTiempo: 'all',
-	filtroIngrediente: 'all'
+	filtroIngrediente: 'all',
+	filtroNombre: ''
 };
 
 var filtrosDeTiempo = [
@@ -104,6 +105,18 @@ function escogerImagenAleatoria(imagenes) {
 	return null;
 }
 
+function escogerImagenPrincipal(imagenes) {
+	if (Array.isArray(imagenes) && imagenes.length > 0) {
+		return normalizarRutaImagen(imagenes[0]);
+	}
+
+	if (typeof imagenes === 'string' && imagenes.trim() !== '') {
+		return normalizarRutaImagen(imagenes);
+	}
+
+	return null;
+}
+
 function normalizarRutaImagen(rutaImagen) {
 	if (typeof rutaImagen !== 'string') return null;
 
@@ -132,6 +145,8 @@ function normalizarTexto(texto) {
 }
 
 function singularizarPalabra(palabra) {
+	if (palabra === 'tomates') return 'tomate';
+
 	if (palabra.length > 4 && palabra.endsWith('es')) {
 		return palabra.slice(0, -2);
 	}
@@ -144,7 +159,29 @@ function singularizarPalabra(palabra) {
 }
 
 function extraerIngredientesCanonicosDeLinea(lineaIngrediente) {
-	var linea = normalizarTexto(lineaIngrediente)
+	var lineaNormalizada = normalizarTexto(lineaIngrediente)
+		.replace(/\([^)]*\)/g, ' ')
+		.replace(/[:]/g, ' ')
+		.replace(/[0-9]+([.,][0-9]+)?/g, ' ')
+		.replace(/[\/]/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+
+	if (!lineaNormalizada) return [];
+
+	var ingredientes = [];
+
+	if (lineaNormalizada.indexOf('ralladura de limon') !== -1) {
+		ingredientes.push('ralladura de limon');
+		lineaNormalizada = lineaNormalizada.replace('ralladura de limon', '').trim();
+	}
+
+	if (lineaNormalizada.indexOf('ralladura de naranja') !== -1) {
+		ingredientes.push('ralladura de naranja');
+		lineaNormalizada = lineaNormalizada.replace('ralladura de naranja', '').trim();
+	}
+
+	var linea = lineaNormalizada
 		.replace(/\([^)]*\)/g, ' ')
 		.replace(/[:]/g, ' ')
 		.replace(/[0-9]+([.,][0-9]+)?/g, ' ')
@@ -155,7 +192,6 @@ function extraerIngredientesCanonicosDeLinea(lineaIngrediente) {
 	if (!linea) return [];
 
 	var partes = linea.split(/,|\sy\s/);
-	var ingredientes = [];
 
 	partes.forEach(function(parte) {
 		var palabras = parte.trim().split(/\s+/).filter(Boolean);
@@ -204,6 +240,7 @@ function normalizarIngredienteBase(ingrediente) {
 	var base = normalizarTexto(ingrediente);
 	if (!base) return '';
 
+	if (base === 'tomat') return 'tomate';
 	if (base === 'tomates') return 'tomate';
 	if (base === 'patatas') return 'patata';
 	if (base === 'pimientos') return 'pimiento';
@@ -212,6 +249,7 @@ function normalizarIngredienteBase(ingrediente) {
 	if (base === 'guisantes') return 'guisante';
 	if (base === 'setas') return 'seta';
 	if (base === 'almendras') return 'almendra';
+	if (base === 'ralladura') return 'ralladura de limon';
 
 	return base;
 }
@@ -388,6 +426,17 @@ function actualizarEstadoBotonesIngredientes() {
 	});
 }
 
+function inicializarFiltroNombre() {
+	var input = document.getElementById('galeria-filtro-nombre');
+	if (!input) return;
+
+	input.value = estadoGaleria.filtroNombre;
+	input.addEventListener('input', function(event) {
+		estadoGaleria.filtroNombre = event.target.value || '';
+		aplicarFiltrosYRenderizar();
+	});
+}
+
 function filtrarRecetasPorTiempo(recetas, filtroTiempo) {
 	if (filtroTiempo === 'all') return recetas;
 
@@ -408,6 +457,15 @@ function filtrarRecetasPorIngrediente(recetas, ingrediente) {
 	});
 }
 
+function filtrarRecetasPorNombre(recetas, texto) {
+	var consulta = normalizarTexto(texto || '');
+	if (!consulta) return recetas;
+
+	return recetas.filter(function(receta) {
+		return normalizarTexto(receta.name || '').indexOf(consulta) !== -1;
+	});
+}
+
 function pintarGaleria(recetas) {
 	var galeriaListado = document.getElementById('galeria-listado');
 	if (!galeriaListado) return;
@@ -423,7 +481,7 @@ function pintarGaleria(recetas) {
 	}
 
 	recetas.forEach(function(receta) {
-		var imagen = escogerImagenAleatoria(receta.image);
+		var imagen = escogerImagenPrincipal(receta.image);
 		if (!imagen) return;
 		var minutosTotales = extraerMinutosDesdeISO8601(receta.totalTime);
 
@@ -468,6 +526,7 @@ function pintarGaleria(recetas) {
 function aplicarFiltrosYRenderizar() {
 	var recetasFiltradas = filtrarRecetasPorTiempo(estadoGaleria.recetas, estadoGaleria.filtroTiempo);
 	recetasFiltradas = filtrarRecetasPorIngrediente(recetasFiltradas, estadoGaleria.filtroIngrediente);
+	recetasFiltradas = filtrarRecetasPorNombre(recetasFiltradas, estadoGaleria.filtroNombre);
 	pintarGaleria(recetasFiltradas);
 }
 
@@ -576,6 +635,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	cargarRecetasConFallback()
 		.then(function(data) {
 			estadoGaleria.recetas = data['@graph'] || [];
+			inicializarFiltroNombre();
 			pintarFiltrosGaleria();
 			pintarFiltrosIngredientes(estadoGaleria.recetas);
 			aplicarFiltrosYRenderizar();
