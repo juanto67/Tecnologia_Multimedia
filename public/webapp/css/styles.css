@@ -85,6 +85,43 @@ textarea:focus {
   color: #8b7b3a;
 }
 
+/* Galería: oscurecer imagen al hover (overlay) */
+#galeria-listado .galeria-card {
+  overflow: hidden;
+}
+
+#galeria-listado .galeria-card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+#galeria-listado .galeria-card-media::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+#galeria-listado .galeria-card:hover .galeria-card-media::after,
+#galeria-listado .galeria-card:focus-within .galeria-card-media::after {
+  opacity: 1;
+}
+
+#galeria-listado .galeria-card-media img {
+  transition: transform 0.25s ease;
+}
+
+#galeria-listado .galeria-card:hover .galeria-card-media img,
+#galeria-listado .galeria-card:focus-within .galeria-card-media img {
+  transform: scale(1.03);
+}
+
 .filtro-btn {
   border: 1px solid #f0c200;
   background: #fff8d6;
@@ -103,6 +140,88 @@ textarea:focus {
   background: #fad02c;
   color: #2f2600;
   border-color: #d4aa05;
+}
+
+/* === Sección Contacto estilo "Team" (sin estilos inline) === */
+.contact-kicker {
+  letter-spacing: 5px;
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item {
+  transition: .5s;
+}
+
+.team-social {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+.team-social a.btn {
+  position: relative;
+  margin: 0 3px;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.team-social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.team-item:hover {
+  box-shadow: 0 0 30px #CCCCCC;
+}
+
+.team-item:hover .team-social {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.team-item:hover .team-social a.btn {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s 0s;
+}
+
+.team-item .team-img img {
+  transition: .5s;
+}
+
+.team-item:hover .team-img img {
+  transform: scale(1.2);
+}
+
+/* Footer estilo TRAVELER (adaptado) */
+.footer-main {
+  margin-top: 90px;
+}
+
+.footer-border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-kicker {
+  letter-spacing: 5px;
+}
+
+.footer-newsletter-input {
+  padding: 25px;
 }
 /*!
 =========================================================
@@ -10881,7 +11000,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #FAD02C !important;
+  color: #A3C14A !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -11398,9 +11517,7 @@ section {
   padding: 100px 0;
 }
 
-section:nth-child(odd) {
-  background-color: #eaf0fc;
-}
+
 
 section.p-sm {
   padding: 30px 0 !important;

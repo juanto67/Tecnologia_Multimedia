@@ -489,7 +489,10 @@ function pintarGaleria(recetas) {
 		col.className = 'col-md-4 mb-4';
 
 		var card = document.createElement('div');
-		card.className = 'card h-100';
+			card.className = 'card h-100 galeria-card';
+
+			var media = document.createElement('div');
+			media.className = 'galeria-card-media';
 
 		var img = document.createElement('img');
 		img.src = imagen;
@@ -515,7 +518,8 @@ function pintarGaleria(recetas) {
 		body.appendChild(meta);
 		body.appendChild(descripcion);
 
-		card.appendChild(img);
+			media.appendChild(img);
+			card.appendChild(media);
 		card.appendChild(body);
 		col.appendChild(card);
 
