@@ -488,11 +488,12 @@ function pintarGaleria(recetas) {
 		var col = document.createElement('div');
 		col.className = 'col-md-4 mb-4';
 
-		var card = document.createElement('div');
-			card.className = 'card h-100 galeria-card';
+		var card = document.createElement('button');
+		card.type = 'button';
+		card.className = 'card h-100 galeria-card';
 
-			var media = document.createElement('div');
-			media.className = 'galeria-card-media';
+		var media = document.createElement('div');
+		media.className = 'galeria-card-media';
 
 		var img = document.createElement('img');
 		img.src = imagen;
@@ -513,13 +514,18 @@ function pintarGaleria(recetas) {
 		var descripcion = document.createElement('p');
 		descripcion.className = 'card-text';
 		descripcion.textContent = receta.description || '';
-
+		card.onclick = function() {
+			var id=document.createElement('div');
+			id.className='col-12';
+			id.textContent = receta['@id'];
+			media.appendChild(id);
+		};
 		body.appendChild(titulo);
 		body.appendChild(meta);
 		body.appendChild(descripcion);
 
-			media.appendChild(img);
-			card.appendChild(media);
+		media.appendChild(img);
+		card.appendChild(media);
 		card.appendChild(body);
 		col.appendChild(card);
 
