@@ -466,6 +466,251 @@ function filtrarRecetasPorNombre(recetas, texto) {
 	});
 }
 
+var estadoFichaReceta = {
+	overlay: null,
+	ficha: null,
+	contenido: null,
+	focoAnterior: null
+};
+
+function obtenerIdReceta(receta) {
+	if (!receta || typeof receta !== 'object') return '';
+
+	var id = receta['@id'];
+	if (typeof id === 'string' && id.trim() !== '') return id;
+
+	var url = receta.url;
+	if (typeof url === 'string' && url.trim() !== '') return url;
+
+	var identifier = receta.identifier;
+	if (typeof identifier === 'string' && identifier.trim() !== '') return identifier;
+
+	if (identifier && typeof identifier === 'object' && typeof identifier.value === 'string') {
+		return identifier.value;
+	}
+
+	return '';
+}
+
+function extraerPasosDeInstrucciones(recipeInstructions) {
+	if (!recipeInstructions) return [];
+
+	if (typeof recipeInstructions === 'string') {
+		var texto = recipeInstructions.trim();
+		return texto ? [texto] : [];
+	}
+
+	var pasos = [];
+
+	function agregarPaso(texto) {
+		if (typeof texto !== 'string') return;
+		var limpio = texto.trim();
+		if (!limpio) return;
+		pasos.push(limpio);
+	}
+
+	function procesarNodo(nodo) {
+		if (!nodo) return;
+
+		if (typeof nodo === 'string') {
+			agregarPaso(nodo);
+			return;
+		}
+
+		if (Array.isArray(nodo)) {
+			nodo.forEach(procesarNodo);
+			return;
+		}
+
+		if (typeof nodo !== 'object') return;
+
+		if (typeof nodo.text === 'string') {
+			agregarPaso(nodo.text);
+		}
+
+		if (Array.isArray(nodo.itemListElement)) {
+			nodo.itemListElement.forEach(function(item) {
+				if (item && typeof item === 'object' && typeof item.text === 'string') {
+					agregarPaso(item.text);
+				} else {
+					procesarNodo(item);
+				}
+			});
+		}
+ 	}
+
+	procesarNodo(recipeInstructions);
+	return pasos;
+}
+
+function asegurarOverlayFichaReceta() {
+	if (estadoFichaReceta.overlay) return;
+
+	var overlay = document.createElement('div');
+	overlay.id = 'receta-overlay';
+	overlay.className = 'receta-overlay';
+	overlay.setAttribute('hidden', 'hidden');
+
+	var ficha = document.createElement('div');
+	ficha.className = 'card receta-ficha';
+	ficha.setAttribute('role', 'dialog');
+	ficha.setAttribute('aria-modal', 'true');
+	ficha.setAttribute('tabindex', '-1');
+
+	var cerrar = document.createElement('button');
+	cerrar.type = 'button';
+	cerrar.className = 'receta-ficha-cerrar';
+	cerrar.setAttribute('aria-label', 'Cerrar ficha de receta');
+	cerrar.innerHTML = '&times;';
+	cerrar.addEventListener('click', function(event) {
+		event.preventDefault();
+		event.stopPropagation();
+		cerrarFichaReceta();
+	});
+
+	var contenido = document.createElement('div');
+	contenido.className = 'card-body receta-ficha-body';
+
+	ficha.appendChild(cerrar);
+	ficha.appendChild(contenido);
+	overlay.appendChild(ficha);
+	document.body.appendChild(overlay);
+
+	overlay.addEventListener('click', function(event) {
+		if (event.target === overlay) {
+			cerrarFichaReceta();
+		}
+	});
+
+	document.addEventListener('keydown', function(event) {
+		if (event.key !== 'Escape') return;
+		if (!estadoFichaReceta.overlay) return;
+		if (estadoFichaReceta.overlay.hasAttribute('hidden')) return;
+		cerrarFichaReceta();
+	});
+
+	estadoFichaReceta.overlay = overlay;
+	estadoFichaReceta.ficha = ficha;
+	estadoFichaReceta.contenido = contenido;
+}
+
+function renderizarFichaReceta(receta) {
+	asegurarOverlayFichaReceta();
+
+	var contenido = estadoFichaReceta.contenido;
+	if (!contenido) return;
+
+	contenido.innerHTML = '';
+
+	var titulo = document.createElement('h2');
+	titulo.id = 'receta-ficha-titulo';
+	titulo.className = 'h4 mb-3';
+	titulo.textContent = receta.name || 'Receta';
+	contenido.appendChild(titulo);
+
+	estadoFichaReceta.ficha.setAttribute('aria-labelledby', titulo.id);
+
+	var imagen = escogerImagenPrincipal(receta.image);
+	if (imagen) {
+		var img = document.createElement('img');
+		img.src = imagen;
+		img.alt = receta.name || 'Receta mallorquina';
+		img.className = 'img-fluid mb-3';
+		contenido.appendChild(img);
+	}
+
+	var minutosTotales = extraerMinutosDesdeISO8601(receta.totalTime);
+	var meta = document.createElement('p');
+	meta.className = 'text-muted mb-3';
+	meta.textContent = 'Tiempo total: ' + formatearMinutos(minutosTotales);
+	contenido.appendChild(meta);
+
+	if (receta.description) {
+		var descripcion = document.createElement('p');
+		descripcion.className = 'mb-4';
+		descripcion.textContent = receta.description;
+		contenido.appendChild(descripcion);
+	}
+
+	if (Array.isArray(receta.recipeIngredient) && receta.recipeIngredient.length > 0) {
+		var hIngredientes = document.createElement('h3');
+		hIngredientes.className = 'h5 mb-2';
+		hIngredientes.textContent = 'Ingredientes';
+		contenido.appendChild(hIngredientes);
+
+		var lista = document.createElement('ul');
+		lista.className = 'mb-4';
+		receta.recipeIngredient.forEach(function(linea) {
+			if (typeof linea !== 'string' || !linea.trim()) return;
+			var li = document.createElement('li');
+			li.textContent = linea.trim();
+			lista.appendChild(li);
+		});
+		contenido.appendChild(lista);
+	}
+
+	var pasos = extraerPasosDeInstrucciones(receta.recipeInstructions);
+	if (pasos.length > 0) {
+		var hPasos = document.createElement('h3');
+		hPasos.className = 'h5 mb-2';
+		hPasos.textContent = 'Preparación';
+		contenido.appendChild(hPasos);
+
+		var ol = document.createElement('ol');
+		ol.className = 'mb-0';
+		pasos.forEach(function(paso) {
+			var li = document.createElement('li');
+			li.textContent = paso;
+			ol.appendChild(li);
+		});
+		contenido.appendChild(ol);
+	}
+}
+
+function abrirFichaRecetaDesdeElemento(elemento) {
+	if (!elemento) return;
+	asegurarOverlayFichaReceta();
+
+	var recetaId = (elemento.getAttribute('data-receta-id') || '').trim();
+	var indiceTexto = elemento.getAttribute('data-receta-indice');
+	var indice = indiceTexto ? parseInt(indiceTexto, 10) : NaN;
+
+	var receta = null;
+	if (recetaId) {
+		receta = estadoGaleria.recetas.find(function(item) {
+			return obtenerIdReceta(item) === recetaId;
+		});
+	}
+
+	if (!receta && !isNaN(indice) && estadoGaleria.recetas[indice]) {
+		receta = estadoGaleria.recetas[indice];
+	}
+
+	if (!receta) return;
+
+	estadoFichaReceta.focoAnterior = document.activeElement;
+	renderizarFichaReceta(receta);
+
+	estadoFichaReceta.overlay.removeAttribute('hidden');
+	estadoFichaReceta.overlay.classList.add('is-open');
+	document.body.classList.add('receta-overlay-open');
+	estadoFichaReceta.ficha.focus();
+}
+
+function cerrarFichaReceta() {
+	if (!estadoFichaReceta.overlay) return;
+
+	estadoFichaReceta.overlay.classList.remove('is-open');
+	estadoFichaReceta.overlay.setAttribute('hidden', 'hidden');
+	document.body.classList.remove('receta-overlay-open');
+
+	var foco = estadoFichaReceta.focoAnterior;
+	estadoFichaReceta.focoAnterior = null;
+	if (foco && typeof foco.focus === 'function') {
+		foco.focus();
+	}
+}
+
 function pintarGaleria(recetas) {
 	var galeriaListado = document.getElementById('galeria-listado');
 	if (!galeriaListado) return;
@@ -480,10 +725,11 @@ function pintarGaleria(recetas) {
 		return;
 	}
 
-	recetas.forEach(function(receta) {
+	recetas.forEach(function(receta, indice) {
 		var imagen = escogerImagenPrincipal(receta.image);
 		if (!imagen) return;
 		var minutosTotales = extraerMinutosDesdeISO8601(receta.totalTime);
+		var indiceOriginal = estadoGaleria.recetas.indexOf(receta);
 
 		var col = document.createElement('div');
 		col.className = 'col-md-4 mb-4';
@@ -491,6 +737,12 @@ function pintarGaleria(recetas) {
 		var card = document.createElement('button');
 		card.type = 'button';
 		card.className = 'card h-100 galeria-card';
+		card.setAttribute('data-receta-id', obtenerIdReceta(receta));
+		card.setAttribute('data-receta-indice', String(indiceOriginal === -1 ? indice : indiceOriginal));
+		card.setAttribute('aria-label', 'Abrir receta: ' + (receta.name || 'Receta'));
+		card.addEventListener('click', function(event) {
+			abrirFichaRecetaDesdeElemento(event.currentTarget);
+		});
 
 		var media = document.createElement('div');
 		media.className = 'galeria-card-media';
@@ -514,12 +766,6 @@ function pintarGaleria(recetas) {
 		var descripcion = document.createElement('p');
 		descripcion.className = 'card-text';
 		descripcion.textContent = receta.description || '';
-		card.onclick = function() {
-			var id=document.createElement('div');
-			id.className='col-12';
-			id.textContent = receta['@id'];
-			media.appendChild(id);
-		};
 		body.appendChild(titulo);
 		body.appendChild(meta);
 		body.appendChild(descripcion);

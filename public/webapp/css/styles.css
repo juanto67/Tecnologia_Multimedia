@@ -88,6 +88,13 @@ textarea:focus {
 /* Galería: oscurecer imagen al hover (overlay) */
 #galeria-listado .galeria-card {
   overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+
+#galeria-listado button.galeria-card {
+  padding: 0;
+  border: 0;
 }
 
 #galeria-listado .galeria-card-media {
@@ -120,6 +127,54 @@ textarea:focus {
 #galeria-listado .galeria-card:hover .galeria-card-media img,
 #galeria-listado .galeria-card:focus-within .galeria-card-media img {
   transform: scale(1.03);
+}
+
+/* Ficha receta (overlay negro + card centrada) */
+body.receta-overlay-open {
+  overflow: hidden;
+}
+
+.receta-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 5000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.receta-overlay.is-open {
+  display: flex;
+}
+
+.receta-ficha {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.receta-ficha-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #111;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.receta-ficha-cerrar:hover {
+  opacity: 0.8;
+}
+
+.receta-ficha-body {
+  overflow: auto;
 }
 
 .filtro-btn {
