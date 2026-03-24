@@ -1,15 +1,28 @@
 
 @charset "UTF-8";
+
+:root {
+  --warm-primary: #a0522d;
+  --warm-ocre: #c68642;
+  --warm-brown: #8b5c2a;
+  --warm-earth: #deb887;
+  --warm-bg: #fff8f0;
+  --warm-text: #3e2723;
+  --warm-ivory: #fffaf3;
+  --warm-accent: #e97451;
+  --warm-footer: #5d4037;
+  --warm-footer-text: #e0c9a6;
+}
 /* === Personalización: Navbar blanca al hacer scroll === */
 .navbar.scrolled {
-  background: #fff !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: var(--warm-ivory) !important;
+  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.12);
   transition: background 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .nav-link,
 .navbar.scrolled .navbar-toggler-icon {
-  color: #222 !important;
+  color: var(--warm-primary) !important;
 }
 
 /* A11y: foco visible consistente para navegacion por teclado */
@@ -18,13 +31,13 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 3px solid #1f6feb !important;
+  outline: 3px solid var(--warm-ocre) !important;
   outline-offset: 2px;
 }
 
 /* Tarjetas de creadores sin estilos inline */
 .creator-card {
-  background: #fff;
+  background: var(--warm-ivory);
   border-radius: 12px;
 }
 
@@ -45,8 +58,8 @@ textarea:focus {
   left: 0;
   top: -40px;
   z-index: 2000;
-  background: #111;
-  color: #fff;
+  background: var(--warm-brown);
+  color: var(--warm-ivory);
   padding: 8px 12px;
 }
 
@@ -62,7 +75,7 @@ textarea:focus {
 }
 
 .galeria-filtros-label {
-  color: #5a4a00;
+  color: var(--warm-primary);
   font-weight: 500;
 }
 
@@ -74,15 +87,15 @@ textarea:focus {
 .galeria-filtro-nombre {
   width: 100%;
   max-width: 460px;
-  border: 1px solid #f0c200;
-  background: #fffdf0;
-  color: #5a4a00;
+  border: 1px solid var(--warm-ocre);
+  background: var(--warm-ivory);
+  color: var(--warm-primary);
   border-radius: 999px;
   padding: 10px 16px;
 }
 
 .galeria-filtro-nombre::placeholder {
-  color: #8b7b3a;
+  color: var(--warm-brown);
 }
 
 /* Galería: oscurecer imagen al hover (overlay) */
@@ -109,7 +122,7 @@ textarea:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   opacity: 0;
   transition: opacity 0.25s ease;
   pointer-events: none;
@@ -137,7 +150,7 @@ body.receta-overlay-open {
 .receta-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.92);
   z-index: 5000;
   display: none;
   align-items: center;
@@ -164,7 +177,7 @@ body.receta-overlay-open {
   height: 44px;
   border: 0;
   background: transparent;
-  color: #111;
+  color: var(--warm-brown);
   font-size: 32px;
   line-height: 1;
 }
@@ -178,9 +191,9 @@ body.receta-overlay-open {
 }
 
 .filtro-btn {
-  border: 1px solid #f0c200;
-  background: #fff8d6;
-  color: #5a4a00;
+  border: 1px solid var(--warm-ocre);
+  background: var(--warm-earth);
+  color: var(--warm-primary);
   border-radius: 999px;
   padding: 8px 16px;
   font-weight: 500;
@@ -188,13 +201,13 @@ body.receta-overlay-open {
 }
 
 .filtro-btn:hover {
-  background: #ffe889;
+  background: #d2b48c;
 }
 
 .filtro-btn.is-active {
-  background: #fad02c;
-  color: #2f2600;
-  border-color: #d4aa05;
+  background: var(--warm-primary);
+  color: var(--warm-ivory);
+  border-color: var(--warm-brown);
 }
 
 /* === Sección Contacto estilo "Team" (sin estilos inline) === */
@@ -241,11 +254,11 @@ body.receta-overlay-open {
 }
 
 .team-item:hover {
-  box-shadow: 0 0 30px #CCCCCC;
+  box-shadow: 0 0 30px rgba(139, 92, 42, 0.22);
 }
 
 .team-item:hover .team-social {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(93, 64, 55, 0.5);
 }
 
 .team-item:hover .team-social a.btn {
@@ -265,18 +278,118 @@ body.receta-overlay-open {
 /* Footer estilo TRAVELER (adaptado) */
 .footer-main {
   margin-top: 90px;
+  background: var(--warm-footer) !important;
+  color: var(--warm-footer-text);
 }
 
 .footer-border {
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(198, 134, 66, 0.45) !important;
 }
 
 .footer-kicker {
   letter-spacing: 5px;
+  color: var(--warm-accent);
 }
 
 .footer-newsletter-input {
   padding: 25px;
+}
+
+/* Footer inferior: marca marrón y bloque "Síguenos" en verde */
+.footer-main .navbar-brand h1,
+.footer-main .navbar-brand .text-primary,
+.footer-main .navbar-brand .text-white {
+  color: var(--warm-brown) !important;
+}
+
+.footer-main .footer-kicker {
+  color: var(--warm-footer-text) !important;
+}
+
+.footer-main .btn-outline-primary {
+  color: var(--warm-footer-text) !important;
+  border-color: var(--warm-footer-text) !important;
+}
+
+.footer-main .btn-outline-primary:hover,
+.footer-main .btn-outline-primary:focus {
+  background-color: var(--warm-footer-text) !important;
+  border-color: var(--warm-footer-text) !important;
+  color: #fff !important;
+}
+
+/* Overrides globales para forzar paleta cálida + sans-serif */
+html, body, body * {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.text-primary,
+a,
+.navbar-light .navbar-brand {
+  color: var(--warm-primary) !important;
+}
+
+/* Navbar superior: enlaces del menú en negro */
+.navbar-light .navbar-nav .nav-link,
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+}
+
+/* Título Sabors de Mallorca en marrón */
+#scrollspy .navbar-brand,
+#scrollspy .navbar-brand .text-primary {
+  color: var(--warm-brown) !important;
+}
+
+/* LinkedIn en verde, como antes */
+a[aria-label*="LinkedIn"] {
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+a[aria-label*="LinkedIn"]:hover,
+a[aria-label*="LinkedIn"]:focus {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+  color: var(--warm-ivory) !important;
+}
+
+.btn-outline-primary {
+  color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+  color: var(--warm-ivory) !important;
+}
+
+.bg-dark {
+  background-color: var(--warm-footer) !important;
+}
+
+.text-white-50 {
+  color: var(--warm-footer-text) !important;
+}
+
+.text-white {
+  color: var(--warm-ivory) !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 /*!
 =========================================================
@@ -293,33 +406,33 @@ body.receta-overlay-open {
 */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap");
 :root {
-  --blue: #79A9F5;
-  --indigo: #C45F90;
-  --purple: #A16AE8;
-  --pink: #FC8BC0;
-  --red: #F85C70;
-  --orange: #FF8882;
-  --yellow: #FAD02C;
-  --green: #A3C14A;
-  --teal: #20c997;
-  --cyan: #47D8E0;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #FAD02C;
-  --secondary: #6c757d;
-  --success: #A3C14A;
-  --info: #47D8E0;
-  --warning: #FF8882;
-  --danger: #F85C70;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  --blue: #a0522d;
+  --indigo: #8b5c2a;
+  --purple: #8b5c2a;
+  --pink: #e97451;
+  --red: #a0522d;
+  --orange: #c68642;
+  --yellow: #d2b48c;
+  --green: #8b5c2a;
+  --teal: #c68642;
+  --cyan: #deb887;
+  --white: #fffaf3;
+  --gray: #8b5c2a;
+  --gray-dark: #5d4037;
+  --primary: #a0522d;
+  --secondary: #8b5c2a;
+  --success: #8b5c2a;
+  --info: #c68642;
+  --warning: #d2b48c;
+  --danger: #a0522d;
+  --light: #fff8f0;
+  --dark: #5d4037;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Ubuntu", sans-serif;
+  --font-family-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -330,7 +443,7 @@ body.receta-overlay-open {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -342,13 +455,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #3e2723;
   text-align: left;
-  background-color: #fff;
+  background-color: #fff8f0;
 }
 
 [tabindex="-1"]:focus {
@@ -553,6 +666,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 button:not(:disabled),
@@ -581,6 +695,7 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
+  appearance: listbox;
 }
 
 textarea {
@@ -619,15 +734,18 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
+  appearance: button;
 }
 
 output {
