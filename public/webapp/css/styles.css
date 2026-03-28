@@ -1,15 +1,30 @@
 
 @charset "UTF-8";
+
+:root {
+  --warm-primary: #1f8f3a;
+  --warm-ocre: #2d6a4f;
+  --warm-brown: #245f42;
+  --warm-earth: #d7efe2;
+  --warm-bg: #f5fbf7;
+  --warm-text: #1c3a2e;
+  --warm-ivory: #f9fefb;
+  --warm-accent: #3aa368;
+  --warm-footer: #123a2a;
+  --warm-footer-text: #cde7d8;
+  --brand-sabors: #000000;
+  --brand-mallorca: #1f8f3a;
+}
 /* === Personalización: Navbar blanca al hacer scroll === */
 .navbar.scrolled {
-  background: #fff !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: var(--warm-ivory) !important;
+  box-shadow: 0 2px 8px rgba(31, 143, 58, 0.16);
   transition: background 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled .navbar-brand,
 .navbar.scrolled .nav-link,
 .navbar.scrolled .navbar-toggler-icon {
-  color: #222 !important;
+  color: var(--warm-primary) !important;
 }
 
 /* A11y: foco visible consistente para navegacion por teclado */
@@ -18,13 +33,13 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 3px solid #1f6feb !important;
+  outline: 3px solid var(--warm-ocre) !important;
   outline-offset: 2px;
 }
 
 /* Tarjetas de creadores sin estilos inline */
 .creator-card {
-  background: #fff;
+  background: var(--warm-ivory);
   border-radius: 12px;
 }
 
@@ -45,8 +60,8 @@ textarea:focus {
   left: 0;
   top: -40px;
   z-index: 2000;
-  background: #111;
-  color: #fff;
+  background: var(--warm-brown);
+  color: var(--warm-ivory);
   padding: 8px 12px;
 }
 
@@ -58,12 +73,17 @@ textarea:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d8eadf;
+  border-radius: 14px;
+  padding: 10px;
 }
 
 .galeria-filtros-label {
-  color: #5a4a00;
+  color: #416355;
   font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .galeria-filtro-nombre-wrap {
@@ -74,35 +94,644 @@ textarea:focus {
 .galeria-filtro-nombre {
   width: 100%;
   max-width: 460px;
-  border: 1px solid #f0c200;
-  background: #fffdf0;
-  color: #5a4a00;
+  border: 1px solid #cfe3d7;
+  background: #fff;
+  color: #1f3c31;
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 11px 16px;
 }
 
 .galeria-filtro-nombre::placeholder {
-  color: #8b7b3a;
+  color: var(--warm-brown);
+}
+
+/* Galería: oscurecer imagen al hover (overlay) */
+#galeria-listado .galeria-card {
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+  border-radius: 16px;
+  border: 1px solid #d7eade;
+}
+
+#galeria-listado button.galeria-card {
+  padding: 0;
+  border: 0;
+}
+
+#galeria-listado .galeria-card-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #edf7f1;
+}
+
+#galeria-listado .galeria-card-media::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+#galeria-listado .galeria-card:hover .galeria-card-media::after,
+#galeria-listado .galeria-card:focus-within .galeria-card-media::after {
+  opacity: 1;
+}
+
+#galeria-listado .galeria-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+#galeria-listado .galeria-card:hover .galeria-card-media img,
+#galeria-listado .galeria-card:focus-within .galeria-card-media img {
+  transform: scale(1.03);
+}
+
+/* Ficha receta (overlay negro + card centrada) */
+body.receta-overlay-open {
+  overflow: hidden;
+}
+
+.receta-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 5000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.receta-overlay.is-open {
+  display: flex;
+}
+
+.receta-ficha {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.receta-ficha-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--warm-brown);
+  font-size: 32px;
+  line-height: 1;
+}
+
+.receta-ficha-cerrar:hover {
+  opacity: 0.8;
+}
+
+.receta-ficha-body {
+  overflow: auto;
 }
 
 .filtro-btn {
-  border: 1px solid #f0c200;
-  background: #fff8d6;
-  color: #5a4a00;
+  border: 1px solid #cfe4d8;
+  background: #fff;
+  color: #2e5544;
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 7px 14px;
   font-weight: 500;
+  font-size: 0.92rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .filtro-btn:hover {
-  background: #ffe889;
+  background: #eef8f2;
+  border-color: #a8cfbb;
 }
 
 .filtro-btn.is-active {
-  background: #fad02c;
-  color: #2f2600;
-  border-color: #d4aa05;
+  background: #2d6a4f;
+  color: #fff;
+  border-color: #2d6a4f;
+}
+
+/* Compacta los espacios verticales entre bloques principales */
+#about {
+  padding: 0 !important;
+}
+
+#galeria,
+#mapa,
+#features,
+#contact-us,
+#contact {
+  padding: clamp(40px, 6vw, 64px) 0 !important;
+}
+
+/* Vista de mapa con panel lateral (solo interfaz) */
+.mapa-section {
+  background: linear-gradient(180deg, #fff 0%, #f1faf5 100%);
+}
+
+.mapa-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.mapa-filtros {
+  background: #fff;
+  border: 1px solid #d2e7da;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 28px rgba(23, 84, 59, 0.08);
+  align-self: start;
+}
+
+.mapa-filtros-titulo {
+  margin: 0;
+  color: #1f8f3a;
+  font-size: 1.05rem;
+}
+
+.mapa-filtros-subtitulo {
+  margin: 6px 0 12px;
+  color: #466a59;
+  font-size: 0.92rem;
+}
+
+.mapa-filtro-grupo {
+  margin-bottom: 12px;
+}
+
+.mapa-filtro-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2f5a48;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.mapa-select {
+  width: 100%;
+  border: 1px solid #cfe4d8;
+  border-radius: 10px;
+  background: #fff;
+  color: #204334;
+  padding: 10px 12px;
+  font-size: 0.94rem;
+}
+
+.mapa-select:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.14);
+  outline: none;
+}
+
+.mapa-card {
+  border: 1px solid #d2e7da;
+  border-radius: 18px;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(23, 84, 59, 0.1);
+  min-height: 460px;
+}
+
+.mapa-iframe {
+  width: 100%;
+  min-height: 444px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Contact Us (inspirado en template Klassy Cafe, adaptado) */
+.contact-us-reservation {
+  margin-top: 20px;
+  padding: clamp(64px, 10vw, 110px) 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+    url("../img/ensaimada/1.jpg") center/cover no-repeat;
+}
+
+.contact-us-reservation .section-heading {
+  margin-bottom: 24px;
+}
+
+.contact-us-reservation .section-heading h6,
+.contact-us-reservation .section-heading h2,
+.contact-us-reservation p {
+  color: #fff;
+}
+
+.contact-us-left {
+  color: #fff;
+}
+
+.contact-us-left p {
+  font-size: clamp(0.94rem, 1.2vw, 1rem);
+}
+
+.contact-us-left .row {
+  row-gap: 14px;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  height: 100%;
+}
+
+.contact-card i {
+  width: clamp(48px, 7vw, 56px);
+  height: clamp(48px, 7vw, 56px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #1f8f3a;
+  border-radius: 50%;
+  font-size: clamp(16px, 2.6vw, 20px);
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.contact-card h4 {
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-card span {
+  display: block;
+  line-height: 1.35;
+  font-size: clamp(0.84rem, 1.5vw, 0.94rem);
+}
+
+.contact-card span a {
+  color: #000 !important;
+}
+
+.contact-card span a:hover,
+.contact-card span a:focus {
+  color: #000 !important;
+}
+
+.contact-us-form-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: clamp(20px, 3vw, 36px) clamp(16px, 2.4vw, 26px) clamp(16px, 2vw, 26px);
+}
+
+.contact-us-form h4 {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  color: #2a2a2a;
+  margin-bottom: clamp(14px, 2vw, 24px);
+}
+
+.contact-us-form input,
+.contact-us-form textarea,
+.contact-us-form select {
+  color: #2a2a2a;
+  font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 100%;
+  height: clamp(42px, 5vw, 46px);
+  border-radius: 6px;
+  outline: none;
+  padding: 3px 16px 0;
+  margin-bottom: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contact-us-form textarea {
+  height: auto;
+  padding-top: 12px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus,
+.contact-us-form select:focus {
+  border-color: #1f8f3a;
+}
+
+.contact-us-button {
+  margin-top: -4px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background: #1f8f3a;
+  font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  padding: clamp(10px, 1.8vw, 12px) 22px;
+}
+
+.contact-us-button:hover,
+.contact-us-button:focus {
+  background: #2d6a4f;
+}
+
+#scrollspy .navbar-nav .nav-link.nav-link-contact-us {
+  font-weight: 400;
+}
+
+@media (max-width: 991.98px) {
+  .mapa-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa-card {
+    min-height: 360px;
+  }
+
+  .mapa-iframe {
+    min-height: 340px;
+  }
+
+  .contact-us-reservation {
+    margin-top: 12px;
+    padding: clamp(36px, 8vw, 56px) 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-us-form-box {
+    padding: 24px 16px 16px;
+  }
+
+  .contact-us-form h4 {
+    font-size: 24px;
+  }
+}
+
+/* === Sección Contacto estilo "Team" (sin estilos inline) === */
+.contact-kicker {
+  letter-spacing: 5px;
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item {
+  transition: .5s;
+}
+
+.team-social {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+.team-social a.btn {
+  position: relative;
+  margin: 0 3px;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.team-social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.team-item:hover {
+  box-shadow: 0 0 30px rgba(31, 143, 58, 0.24);
+}
+
+.team-item:hover .team-social {
+  background: rgba(18, 58, 42, 0.55);
+}
+
+.team-item:hover .team-social a.btn {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s 0s;
+}
+
+.team-item .team-img img {
+  transition: .5s;
+}
+
+.team-item:hover .team-img img {
+  transform: scale(1.2);
+}
+
+/* Footer estilo TRAVELER (adaptado) */
+.footer-main {
+  margin-top: 90px;
+  background: var(--warm-footer) !important;
+  color: var(--warm-footer-text);
+}
+
+.footer-border {
+  border-color: rgba(58, 163, 104, 0.45) !important;
+}
+
+.footer-kicker {
+  letter-spacing: 5px;
+  color: var(--warm-accent);
+}
+
+.footer-newsletter-input {
+  padding: 25px;
+}
+
+/* Marca: Sabors en negro y de Mallorca en verde */
+.brand-title .brand-sabors {
+  color: var(--brand-sabors) !important;
+}
+
+.brand-title .brand-mallorca {
+  color: var(--brand-mallorca) !important;
+}
+
+/* Evita desbordes del logo del footer en pantallas pequeñas */
+.footer-main .navbar-brand {
+  white-space: normal !important;
+  max-width: 100%;
+}
+
+.footer-main .navbar-brand h1 {
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+  font-size: clamp(1.45rem, 7vw, 2.1rem);
+}
+
+.footer-main .footer-kicker {
+  color: #fff !important;
+}
+
+.footer-main .btn-outline-primary {
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.footer-main .btn-outline-primary:hover,
+.footer-main .btn-outline-primary:focus {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: var(--warm-footer) !important;
+}
+
+/* Overrides globales para forzar paleta verde + sans-serif */
+html, body, body * {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.text-primary,
+a,
+.navbar-light .navbar-brand {
+  color: var(--warm-primary) !important;
+}
+
+/* Navbar superior: transparente (blanco) y en scroll (negro) */
+#scrollspy:not(.scrolled) .navbar-nav .nav-link {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+#scrollspy.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+  text-shadow: none;
+}
+
+/* Seccion activa del menu al hacer scroll */
+#scrollspy .navbar-nav .nav-link.is-active {
+  color: #1f8f3a !important;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+/* Mantiene el color del menú; el logo usa .brand-sabors/.brand-mallorca */
+#scrollspy .navbar-brand {
+  color: inherit !important;
+}
+
+/* LinkedIn en verde, como antes */
+a[aria-label*="LinkedIn"] {
+  color: #28a745 !important;
+  border-color: #28a745 !important;
+}
+
+a[aria-label*="LinkedIn"]:hover,
+a[aria-label*="LinkedIn"]:focus {
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+  color: var(--warm-ivory) !important;
+}
+
+.btn-outline-primary {
+  color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--warm-primary) !important;
+  border-color: var(--warm-primary) !important;
+  color: var(--warm-ivory) !important;
+}
+
+.bg-dark {
+  background-color: var(--warm-footer) !important;
+}
+
+/* Footer completamente en blanco */
+.footer-main,
+.footer-main p,
+.footer-main a,
+.footer-main .text-white,
+.footer-main .text-white-50,
+.footer-main i,
+.footer-main h5,
+.footer-main h6,
+.footer-main .navbar-brand,
+.footer-main .navbar-brand h1,
+.footer-main .navbar-brand .text-primary,
+.footer-main .navbar-brand .text-white {
+  color: #fff !important;
+}
+
+.footer-border,
+.footer-border p,
+.footer-border a,
+.footer-border .text-white,
+.footer-border .text-white-50 {
+  color: #fff !important;
+}
+
+.footer-main a:hover,
+.footer-main a:focus,
+.footer-border a:hover,
+.footer-border a:focus {
+  color: #f2f2f2 !important;
+  text-decoration: underline;
+}
+
+.footer-main .brand-sabors,
+.footer-border .brand-sabors {
+  color: #fff !important;
+}
+
+.text-white-50 {
+  color: var(--warm-footer-text) !important;
+}
+
+.text-white {
+  color: var(--warm-ivory) !important;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 /*!
 =========================================================
@@ -119,33 +748,33 @@ textarea:focus {
 */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap");
 :root {
-  --blue: #79A9F5;
-  --indigo: #C45F90;
-  --purple: #A16AE8;
-  --pink: #FC8BC0;
-  --red: #F85C70;
-  --orange: #FF8882;
-  --yellow: #FAD02C;
-  --green: #A3C14A;
-  --teal: #20c997;
-  --cyan: #47D8E0;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #FAD02C;
-  --secondary: #6c757d;
-  --success: #A3C14A;
-  --info: #47D8E0;
-  --warning: #FF8882;
-  --danger: #F85C70;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  --blue: #2d6a4f;
+  --indigo: #245f42;
+  --purple: #2b7a57;
+  --pink: #3aa368;
+  --red: #2b7a57;
+  --orange: #4fae79;
+  --yellow: #9fd6b9;
+  --green: #1f8f3a;
+  --teal: #2d6a4f;
+  --cyan: #7cc9a1;
+  --white: #f9fefb;
+  --gray: #4a6b5b;
+  --gray-dark: #123a2a;
+  --primary: #1f8f3a;
+  --secondary: #2d6a4f;
+  --success: #1f8f3a;
+  --info: #4fae79;
+  --warning: #9fd6b9;
+  --danger: #2b7a57;
+  --light: #f5fbf7;
+  --dark: #123a2a;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Ubuntu", sans-serif;
+  --font-family-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -156,7 +785,7 @@ textarea:focus {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -168,13 +797,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #1c3a2e;
   text-align: left;
-  background-color: #fff;
+  background-color: #f5fbf7;
 }
 
 [tabindex="-1"]:focus {
@@ -379,6 +1008,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button;
 }
 
 button:not(:disabled),
@@ -407,6 +1037,7 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
   -webkit-appearance: listbox;
+  appearance: listbox;
 }
 
 textarea {
@@ -445,15 +1076,18 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
+  appearance: none;
 }
 
 ::-webkit-file-upload-button {
   font: inherit;
   -webkit-appearance: button;
+  appearance: button;
 }
 
 output {
@@ -10881,7 +11515,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #FAD02C !important;
+  color: #A3C14A !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -11398,9 +12032,7 @@ section {
   padding: 100px 0;
 }
 
-section:nth-child(odd) {
-  background-color: #eaf0fc;
-}
+
 
 section.p-sm {
   padding: 30px 0 !important;

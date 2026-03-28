@@ -12,7 +12,7 @@
             ],
             "video": {
                 "@type": "VideoObject",
-                "name": "Video: Pa amb oli (Mallorca)",
+                "name": "Video: Pa amb oli",
                 "description": "Cómo preparar pa amb oli paso a paso.",
                 "thumbnailUrl": [
                     "https://www.saborsdemallorca.online/img/pa-amb-oli/1.jpg"
@@ -22,7 +22,7 @@
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT1M"
             },
-            "name": "Pa amb oli (Mallorca)",
+            "name": "Pa amb oli",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"
@@ -293,7 +293,7 @@
                 "uploadDate": "2026-03-03T12:00:00Z",
                 "duration": "PT4M"
             },
-            "name": "Ensaimada (casera)",
+            "name": "Ensaimada",
             "author": {
                 "@type": "Organization",
                 "name": "Cocina tradicional de Mallorca"

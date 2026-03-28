@@ -8,6 +8,7 @@
     <title>Sabors de Mallorca</title>
 
 	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40">
@@ -16,7 +17,7 @@
     <!-- Page Navbar -->
     <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="navbar-brand" href="#"><strong class="text-primary">Sabors de Mallorca</strong></a>
+            <a class="navbar-brand brand-title" href="#"><strong><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,19 +28,19 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#galeria">Galería</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#mapa">Mapa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Testmonial</a>
+                        <a class="nav-link" href="#features">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link nav-link-contact-us" href="#contact-us">Contact Us</a>
                     </li>
-                    <li class="nav-item ml-md-4">
-                        <a class="nav-link btn btn-primary" href="components.html">Components</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Nosotros</a>
                     </li>
                 </ul>
             </div>
@@ -89,7 +90,57 @@
         </section>
 
 
-    
+    <section id="mapa" class="py-5 mapa-section">
+        <div class="container">
+            <h2 class="mb-4 text-center">Mapa gastronómico</h2>
+            <div class="mapa-layout">
+                <aside class="mapa-filtros" aria-label="Filtros del mapa">
+                    <h3 class="mapa-filtros-titulo">Explorar</h3>
+                    <p class="mapa-filtros-subtitulo">Filtra por tipo de receta o zona de Mallorca</p>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-tipo">Tipo de receta</label>
+                        <select id="mapa-tipo" class="mapa-select" aria-label="Filtrar por tipo de receta">
+                            <option value="all">Todas</option>
+                            <option value="entrantes">Entrantes</option>
+                            <option value="principales">Platos principales</option>
+                            <option value="dulces">Dulces</option>
+                        </select>
+                    </div>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-zona">Zona</label>
+                        <select id="mapa-zona" class="mapa-select" aria-label="Filtrar por zona">
+                            <option value="all">Toda Mallorca</option>
+                            <option value="palma">Palma</option>
+                            <option value="tramuntana">Serra de Tramuntana</option>
+                            <option value="llevant">Llevant</option>
+                        </select>
+                    </div>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-tiempo">Tiempo de preparación</label>
+                        <select id="mapa-tiempo" class="mapa-select" aria-label="Filtrar por tiempo de preparación">
+                            <option value="all">Cualquier duración</option>
+                            <option value="rapidas">Rápidas</option>
+                            <option value="medias">Medias</option>
+                            <option value="largas">Largas</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <div class="mapa-card">
+                    <iframe
+                        class="mapa-iframe"
+                        title="Mapa de Mallorca"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps?q=Mallorca,+Illes+Balears&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section class="has-bg-img" id="features">
@@ -113,67 +164,190 @@
         </div><!-- End of Modal -->     
     </section><!-- End of features Section -->  
 
-     
-
-    <!-- Testmonial Section -->
-    <section class="text-center pt-5" id="testmonial">
-        <!-- Container -->
+    <!-- Contacto (inspirado en Templatemo Klassy Cafe) -->
+    <section id="contact-us" class="contact-us-reservation">
         <div class="container">
-        </div><!-- End of Cotanier -->  
-    </section><!-- End of Testmonial Section -->
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="contact-us-left">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Contáctanos para dudas, colaboraciones o sugerencias</h2>
+                        </div>
+                        <p>Estamos aquí para ayudarte. Si tienes preguntas sobre el proyecto, quieres colaborar o compartir ideas, escríbenos y te responderemos lo antes posible.</p>
 
-    <!-- Contact Section -->
-    <section id="contact" class="text-center p-md">
-        <div class="container">
-            <h2 class="mb-3">Contacto</h2>
-            <p class="mb-0">Escríbenos para colaborar, proponer mejoras o compartir nuevas recetas de Mallorca.</p>
+                        <div class="row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div class="contact-card">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Teléfono</h4>
+                                    <span><a href="tel:+34600123456">+34 600 123 456</a><br><a href="tel:+34971000123">+34 971 000 123</a></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="contact-card">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Email</h4>
+                                    <span><a href="mailto:sabors_mallorca@gmail.com">sabors_mallorca@gmail.com</a><br><a href="mailto:info@saborsmallorca.com">info@saborsmallorca.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="contact-us-form-box">
+                        <form id="contact-us-form" class="contact-us-form" action="#" method="post">
+                            <h4>Escríbenos</h4>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="text" id="contact-us-name" placeholder="Tu nombre" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="email" type="email" id="contact-us-email" placeholder="Tu email" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="phone" type="tel" id="contact-us-phone" placeholder="Teléfono" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="contact-us-subject" placeholder="Asunto" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="4" id="contact-us-message" placeholder="Mensaje"></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-12">
+                                    <fieldset>
+                                        <button type="submit" class="contact-us-button">Enviar mensaje</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contacto (estilo Team) -->
+    <section id="contact" class="p-0">
+        <div class="container-fluid py-5 bg-white">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase contact-kicker">Contacto</h6>
+                <h1>Contáctanos</h1>
+                <p class="mb-0">Escríbenos para colaborar, proponer mejoras o compartir nuevas recetas de Mallorca.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/ensaimada/1.jpg" alt="Antonio Marí González">
+                            <div class="team-social" aria-label="Enlaces de contacto de Antonio Marí González">
+                                <a class="btn btn-outline-primary btn-square" href="https://www.linkedin.com/in/antonio-mari-gonzalez-7b172b266" target="_blank" rel="noopener" aria-label="LinkedIn de Antonio Marí González">
+                                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" class="team-social-icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Antonio Marí González</h5>
+                            <p class="m-0">Desarrollador Web</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/ensaimada/2.jpg" alt="Juan Marí Gonzalez">
+                            <div class="team-social" aria-label="Enlaces de contacto de Juan Marí Gonzalez">
+                                <a class="btn btn-outline-primary btn-square" href="https://linkedin.com/in/juan-mari-gonzalez-711b18384/" target="_blank" rel="noopener" aria-label="LinkedIn de Juan Marí Gonzalez">
+                                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" class="team-social-icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Juan Marí Gonzalez</h5>
+                            <p class="m-0">Diseñador UI/UX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 
     
 
-    <!-- Section -->
-    <section class="pb-0">
-        <!-- Container -->
-        <div class="container">
+    </main>
 
-            <!-- Creadores con información ampliada -->
-            <div class="pre-footer">
-                <div class="row justify-content-center">
-                    <div class="col-sm-10 col-md-4 m-auto">
-                        <div class="testmonial-wrapper creator-card text-center p-4 shadow-sm">
-                            <img src="media/creator1.jpg" alt="Juan Martínez" class="img-fluid rounded-circle mb-3 creator-avatar">
-                            <h6 class="title mb-1">Juan Martínez</h6>
-                            <p class="text-muted mb-1">Desarrollador Web</p>
-                            <a href="https://www.linkedin.com/in/juan-martinez" target="_blank" rel="noopener" class="d-inline-block mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="creator-link-icon"> LinkedIn
-                            </a>
-                            <p class="small mt-2">Apasionado por la tecnología y el desarrollo de aplicaciones web. Encargado de la integración y la lógica de la web.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-10 col-md-4 m-auto">
-                        <div class="testmonial-wrapper creator-card text-center p-4 shadow-sm">
-                            <img src="media/creator2.jpg" alt="María López" class="img-fluid rounded-circle mb-3 creator-avatar">
-                            <h6 class="title mb-1">María López</h6>
-                            <p class="text-muted mb-1">Diseñadora UI/UX</p>
-                            <a href="https://www.linkedin.com/in/maria-lopez" target="_blank" rel="noopener" class="d-inline-block mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="creator-link-icon"> LinkedIn
-                            </a>
-                            <p class="small mt-2">Especialista en diseño de interfaces y experiencia de usuario. Responsable de la imagen visual y la usabilidad del sitio.</p>
-                        </div>
-                    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5 footer-main">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="#home" class="navbar-brand brand-title">
+                    <h1 class="m-0"><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></h1>
+                </a>
+                <p>Recetas tradicionales, ingredientes de temporada y cultura gastronómica mallorquina.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3 footer-kicker">Síguenos</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-square" href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- foooter -->
-            <footer class="footer">            
-                <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com">DevCRUD</a></p>
-            </footer><!-- End of Footer-->  
-            
-        </div><!--End of Container -->      
-    </section><!-- End of Section -->
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4 footer-kicker">Secciones</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#home"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white-50 mb-2" href="#about"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="#galeria"><i class="fa fa-angle-right mr-2"></i>Galería</a>
+                    <a class="text-white-50 mb-2" href="#features"><i class="fa fa-angle-right mr-2"></i>Features</a>
+                    <a class="text-white-50" href="#contact"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
+                </div>
+            </div>
 
-    </main>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4 footer-kicker">Contacto</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Mallorca, Illes Balears</p>
+                <p><i class="fa fa-envelope mr-2"></i>sablors_mallorca@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5 footer-border">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Copyright &copy; <span class="brand-title"><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></span>. <script>document.write(new Date().getFullYear())</script></p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">Plantilla base: <a href="https://htmlcodex.com" target="_blank" rel="noopener" class="text-white-50">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 <script src="js/main.js"></script>
 </body>
