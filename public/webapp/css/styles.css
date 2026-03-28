@@ -2,21 +2,23 @@
 @charset "UTF-8";
 
 :root {
-  --warm-primary: #a0522d;
-  --warm-ocre: #c68642;
-  --warm-brown: #8b5c2a;
-  --warm-earth: #deb887;
-  --warm-bg: #fff8f0;
-  --warm-text: #3e2723;
-  --warm-ivory: #fffaf3;
-  --warm-accent: #e97451;
-  --warm-footer: #5d4037;
-  --warm-footer-text: #e0c9a6;
+  --warm-primary: #1f8f3a;
+  --warm-ocre: #2d6a4f;
+  --warm-brown: #245f42;
+  --warm-earth: #d7efe2;
+  --warm-bg: #f5fbf7;
+  --warm-text: #1c3a2e;
+  --warm-ivory: #f9fefb;
+  --warm-accent: #3aa368;
+  --warm-footer: #123a2a;
+  --warm-footer-text: #cde7d8;
+  --brand-sabors: #000000;
+  --brand-mallorca: #1f8f3a;
 }
 /* === Personalización: Navbar blanca al hacer scroll === */
 .navbar.scrolled {
   background: var(--warm-ivory) !important;
-  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.12);
+  box-shadow: 0 2px 8px rgba(31, 143, 58, 0.16);
   transition: background 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled .navbar-brand,
@@ -71,12 +73,17 @@ textarea:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d8eadf;
+  border-radius: 14px;
+  padding: 10px;
 }
 
 .galeria-filtros-label {
-  color: var(--warm-primary);
+  color: #416355;
   font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .galeria-filtro-nombre-wrap {
@@ -87,11 +94,11 @@ textarea:focus {
 .galeria-filtro-nombre {
   width: 100%;
   max-width: 460px;
-  border: 1px solid var(--warm-ocre);
-  background: var(--warm-ivory);
-  color: var(--warm-primary);
+  border: 1px solid #cfe3d7;
+  background: #fff;
+  color: #1f3c31;
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 11px 16px;
 }
 
 .galeria-filtro-nombre::placeholder {
@@ -103,6 +110,8 @@ textarea:focus {
   overflow: hidden;
   width: 100%;
   text-align: left;
+  border-radius: 16px;
+  border: 1px solid #d7eade;
 }
 
 #galeria-listado button.galeria-card {
@@ -113,6 +122,8 @@ textarea:focus {
 #galeria-listado .galeria-card-media {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #edf7f1;
 }
 
 #galeria-listado .galeria-card-media::after {
@@ -134,6 +145,10 @@ textarea:focus {
 }
 
 #galeria-listado .galeria-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
   transition: transform 0.25s ease;
 }
 
@@ -191,23 +206,288 @@ body.receta-overlay-open {
 }
 
 .filtro-btn {
-  border: 1px solid var(--warm-ocre);
-  background: var(--warm-earth);
-  color: var(--warm-primary);
+  border: 1px solid #cfe4d8;
+  background: #fff;
+  color: #2e5544;
   border-radius: 999px;
-  padding: 8px 16px;
+  padding: 7px 14px;
   font-weight: 500;
+  font-size: 0.92rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .filtro-btn:hover {
-  background: #d2b48c;
+  background: #eef8f2;
+  border-color: #a8cfbb;
 }
 
 .filtro-btn.is-active {
-  background: var(--warm-primary);
-  color: var(--warm-ivory);
-  border-color: var(--warm-brown);
+  background: #2d6a4f;
+  color: #fff;
+  border-color: #2d6a4f;
+}
+
+/* Compacta los espacios verticales entre bloques principales */
+#about {
+  padding: 0 !important;
+}
+
+#galeria,
+#mapa,
+#features,
+#contact-us,
+#contact {
+  padding: clamp(40px, 6vw, 64px) 0 !important;
+}
+
+/* Vista de mapa con panel lateral (solo interfaz) */
+.mapa-section {
+  background: linear-gradient(180deg, #fff 0%, #f1faf5 100%);
+}
+
+.mapa-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.mapa-filtros {
+  background: #fff;
+  border: 1px solid #d2e7da;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 28px rgba(23, 84, 59, 0.08);
+  align-self: start;
+}
+
+.mapa-filtros-titulo {
+  margin: 0;
+  color: #1f8f3a;
+  font-size: 1.05rem;
+}
+
+.mapa-filtros-subtitulo {
+  margin: 6px 0 12px;
+  color: #466a59;
+  font-size: 0.92rem;
+}
+
+.mapa-filtro-grupo {
+  margin-bottom: 12px;
+}
+
+.mapa-filtro-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2f5a48;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.mapa-select {
+  width: 100%;
+  border: 1px solid #cfe4d8;
+  border-radius: 10px;
+  background: #fff;
+  color: #204334;
+  padding: 10px 12px;
+  font-size: 0.94rem;
+}
+
+.mapa-select:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.14);
+  outline: none;
+}
+
+.mapa-card {
+  border: 1px solid #d2e7da;
+  border-radius: 18px;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(23, 84, 59, 0.1);
+  min-height: 460px;
+}
+
+.mapa-iframe {
+  width: 100%;
+  min-height: 444px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Contact Us (inspirado en template Klassy Cafe, adaptado) */
+.contact-us-reservation {
+  margin-top: 20px;
+  padding: clamp(64px, 10vw, 110px) 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+    url("../img/ensaimada/1.jpg") center/cover no-repeat;
+}
+
+.contact-us-reservation .section-heading {
+  margin-bottom: 24px;
+}
+
+.contact-us-reservation .section-heading h6,
+.contact-us-reservation .section-heading h2,
+.contact-us-reservation p {
+  color: #fff;
+}
+
+.contact-us-left {
+  color: #fff;
+}
+
+.contact-us-left p {
+  font-size: clamp(0.94rem, 1.2vw, 1rem);
+}
+
+.contact-us-left .row {
+  row-gap: 14px;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  height: 100%;
+}
+
+.contact-card i {
+  width: clamp(48px, 7vw, 56px);
+  height: clamp(48px, 7vw, 56px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #1f8f3a;
+  border-radius: 50%;
+  font-size: clamp(16px, 2.6vw, 20px);
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+.contact-card h4 {
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.contact-card span {
+  display: block;
+  line-height: 1.35;
+  font-size: clamp(0.84rem, 1.5vw, 0.94rem);
+}
+
+.contact-card span a {
+  color: #000 !important;
+}
+
+.contact-card span a:hover,
+.contact-card span a:focus {
+  color: #000 !important;
+}
+
+.contact-us-form-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: clamp(20px, 3vw, 36px) clamp(16px, 2.4vw, 26px) clamp(16px, 2vw, 26px);
+}
+
+.contact-us-form h4 {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  color: #2a2a2a;
+  margin-bottom: clamp(14px, 2vw, 24px);
+}
+
+.contact-us-form input,
+.contact-us-form textarea,
+.contact-us-form select {
+  color: #2a2a2a;
+  font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+  border: 1px solid #ddd;
+  background: #fff;
+  width: 100%;
+  height: clamp(42px, 5vw, 46px);
+  border-radius: 6px;
+  outline: none;
+  padding: 3px 16px 0;
+  margin-bottom: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.contact-us-form textarea {
+  height: auto;
+  padding-top: 12px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus,
+.contact-us-form select:focus {
+  border-color: #1f8f3a;
+}
+
+.contact-us-button {
+  margin-top: -4px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  background: #1f8f3a;
+  font-size: clamp(0.9rem, 1.2vw, 0.95rem);
+  font-weight: 700;
+  padding: clamp(10px, 1.8vw, 12px) 22px;
+}
+
+.contact-us-button:hover,
+.contact-us-button:focus {
+  background: #2d6a4f;
+}
+
+#scrollspy .navbar-nav .nav-link.nav-link-contact-us {
+  font-weight: 400;
+}
+
+@media (max-width: 991.98px) {
+  .mapa-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa-card {
+    min-height: 360px;
+  }
+
+  .mapa-iframe {
+    min-height: 340px;
+  }
+
+  .contact-us-reservation {
+    margin-top: 12px;
+    padding: clamp(36px, 8vw, 56px) 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-us-form-box {
+    padding: 24px 16px 16px;
+  }
+
+  .contact-us-form h4 {
+    font-size: 24px;
+  }
 }
 
 /* === Sección Contacto estilo "Team" (sin estilos inline) === */
@@ -254,11 +534,11 @@ body.receta-overlay-open {
 }
 
 .team-item:hover {
-  box-shadow: 0 0 30px rgba(139, 92, 42, 0.22);
+  box-shadow: 0 0 30px rgba(31, 143, 58, 0.24);
 }
 
 .team-item:hover .team-social {
-  background: rgba(93, 64, 55, 0.5);
+  background: rgba(18, 58, 42, 0.55);
 }
 
 .team-item:hover .team-social a.btn {
@@ -283,7 +563,7 @@ body.receta-overlay-open {
 }
 
 .footer-border {
-  border-color: rgba(198, 134, 66, 0.45) !important;
+  border-color: rgba(58, 163, 104, 0.45) !important;
 }
 
 .footer-kicker {
@@ -295,30 +575,44 @@ body.receta-overlay-open {
   padding: 25px;
 }
 
-/* Footer inferior: marca marrón y bloque "Síguenos" en verde */
-.footer-main .navbar-brand h1,
-.footer-main .navbar-brand .text-primary,
-.footer-main .navbar-brand .text-white {
-  color: var(--warm-brown) !important;
+/* Marca: Sabors en negro y de Mallorca en verde */
+.brand-title .brand-sabors {
+  color: var(--brand-sabors) !important;
+}
+
+.brand-title .brand-mallorca {
+  color: var(--brand-mallorca) !important;
+}
+
+/* Evita desbordes del logo del footer en pantallas pequeñas */
+.footer-main .navbar-brand {
+  white-space: normal !important;
+  max-width: 100%;
+}
+
+.footer-main .navbar-brand h1 {
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+  font-size: clamp(1.45rem, 7vw, 2.1rem);
 }
 
 .footer-main .footer-kicker {
-  color: var(--warm-footer-text) !important;
+  color: #fff !important;
 }
 
 .footer-main .btn-outline-primary {
-  color: var(--warm-footer-text) !important;
-  border-color: var(--warm-footer-text) !important;
+  color: #fff !important;
+  border-color: #fff !important;
 }
 
 .footer-main .btn-outline-primary:hover,
 .footer-main .btn-outline-primary:focus {
-  background-color: var(--warm-footer-text) !important;
-  border-color: var(--warm-footer-text) !important;
-  color: #fff !important;
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: var(--warm-footer) !important;
 }
 
-/* Overrides globales para forzar paleta cálida + sans-serif */
+/* Overrides globales para forzar paleta verde + sans-serif */
 html, body, body * {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
@@ -329,16 +623,27 @@ a,
   color: var(--warm-primary) !important;
 }
 
-/* Navbar superior: enlaces del menú en negro */
-.navbar-light .navbar-nav .nav-link,
-.navbar.scrolled .nav-link {
-  color: #000 !important;
+/* Navbar superior: transparente (blanco) y en scroll (negro) */
+#scrollspy:not(.scrolled) .navbar-nav .nav-link {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-/* Título Sabors de Mallorca en marrón */
-#scrollspy .navbar-brand,
-#scrollspy .navbar-brand .text-primary {
-  color: var(--warm-brown) !important;
+#scrollspy.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+  text-shadow: none;
+}
+
+/* Seccion activa del menu al hacer scroll */
+#scrollspy .navbar-nav .nav-link.is-active {
+  color: #1f8f3a !important;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+/* Mantiene el color del menú; el logo usa .brand-sabors/.brand-mallorca */
+#scrollspy .navbar-brand {
+  color: inherit !important;
 }
 
 /* LinkedIn en verde, como antes */
@@ -377,6 +682,43 @@ a[aria-label*="LinkedIn"]:focus {
   background-color: var(--warm-footer) !important;
 }
 
+/* Footer completamente en blanco */
+.footer-main,
+.footer-main p,
+.footer-main a,
+.footer-main .text-white,
+.footer-main .text-white-50,
+.footer-main i,
+.footer-main h5,
+.footer-main h6,
+.footer-main .navbar-brand,
+.footer-main .navbar-brand h1,
+.footer-main .navbar-brand .text-primary,
+.footer-main .navbar-brand .text-white {
+  color: #fff !important;
+}
+
+.footer-border,
+.footer-border p,
+.footer-border a,
+.footer-border .text-white,
+.footer-border .text-white-50 {
+  color: #fff !important;
+}
+
+.footer-main a:hover,
+.footer-main a:focus,
+.footer-border a:hover,
+.footer-border a:focus {
+  color: #f2f2f2 !important;
+  text-decoration: underline;
+}
+
+.footer-main .brand-sabors,
+.footer-border .brand-sabors {
+  color: #fff !important;
+}
+
 .text-white-50 {
   color: var(--warm-footer-text) !important;
 }
@@ -406,27 +748,27 @@ textarea {
 */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap");
 :root {
-  --blue: #a0522d;
-  --indigo: #8b5c2a;
-  --purple: #8b5c2a;
-  --pink: #e97451;
-  --red: #a0522d;
-  --orange: #c68642;
-  --yellow: #d2b48c;
-  --green: #8b5c2a;
-  --teal: #c68642;
-  --cyan: #deb887;
-  --white: #fffaf3;
-  --gray: #8b5c2a;
-  --gray-dark: #5d4037;
-  --primary: #a0522d;
-  --secondary: #8b5c2a;
-  --success: #8b5c2a;
-  --info: #c68642;
-  --warning: #d2b48c;
-  --danger: #a0522d;
-  --light: #fff8f0;
-  --dark: #5d4037;
+  --blue: #2d6a4f;
+  --indigo: #245f42;
+  --purple: #2b7a57;
+  --pink: #3aa368;
+  --red: #2b7a57;
+  --orange: #4fae79;
+  --yellow: #9fd6b9;
+  --green: #1f8f3a;
+  --teal: #2d6a4f;
+  --cyan: #7cc9a1;
+  --white: #f9fefb;
+  --gray: #4a6b5b;
+  --gray-dark: #123a2a;
+  --primary: #1f8f3a;
+  --secondary: #2d6a4f;
+  --success: #1f8f3a;
+  --info: #4fae79;
+  --warning: #9fd6b9;
+  --danger: #2b7a57;
+  --light: #f5fbf7;
+  --dark: #123a2a;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -459,9 +801,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #3e2723;
+  color: #1c3a2e;
   text-align: left;
-  background-color: #fff8f0;
+  background-color: #f5fbf7;
 }
 
 [tabindex="-1"]:focus {

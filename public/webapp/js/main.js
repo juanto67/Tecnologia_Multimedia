@@ -9,6 +9,91 @@ function cambiarNavbarEnScroll() {
 	}
 }
 
+function actualizarEnlaceActivoPorSeccion() {
+	var enlaces = Array.prototype.slice.call(document.querySelectorAll('#navbarSupportedContent .nav-link[href^="#"]'));
+	if (enlaces.length === 0) return;
+
+	var secciones = enlaces
+		.map(function(enlace) {
+			var href = enlace.getAttribute('href') || '';
+			var id = href.replace('#', '').trim();
+			if (!id) return null;
+
+			var seccion = document.getElementById(id);
+			if (!seccion) return null;
+
+			return {
+				enlace: enlace,
+				seccion: seccion
+			};
+		})
+		.filter(Boolean);
+
+	if (secciones.length === 0) return;
+
+	var puntoLectura = window.scrollY + (window.innerHeight * 0.38);
+	var activa = secciones[0];
+
+	secciones.forEach(function(item) {
+		if (item.seccion.offsetTop <= puntoLectura) {
+			activa = item;
+		}
+	});
+
+	secciones.forEach(function(item) {
+		item.enlace.classList.toggle('is-active', item === activa);
+		if (item === activa) {
+			item.enlace.setAttribute('aria-current', 'page');
+		} else {
+			item.enlace.removeAttribute('aria-current');
+		}
+	});
+}
+
+function inicializarMenuMovil() {
+	var boton = document.querySelector('.navbar-toggler');
+	var menu = document.getElementById('navbarSupportedContent');
+	if (!boton || !menu) return;
+
+	function abrirMenu() {
+		menu.classList.add('show');
+		boton.setAttribute('aria-expanded', 'true');
+	}
+
+	function cerrarMenu() {
+		menu.classList.remove('show');
+		boton.setAttribute('aria-expanded', 'false');
+	}
+
+	boton.addEventListener('click', function(event) {
+		event.preventDefault();
+		var abierto = menu.classList.contains('show');
+		if (abierto) {
+			cerrarMenu();
+		} else {
+			abrirMenu();
+		}
+	});
+
+	menu.querySelectorAll('.nav-link').forEach(function(enlace) {
+		enlace.addEventListener('click', function() {
+			cerrarMenu();
+		});
+	});
+
+	document.addEventListener('click', function(event) {
+		if (!menu.classList.contains('show')) return;
+		if (menu.contains(event.target) || boton.contains(event.target)) return;
+		cerrarMenu();
+	});
+
+	window.addEventListener('resize', function() {
+		if (window.innerWidth >= 768) {
+			cerrarMenu();
+		}
+	});
+}
+
 var estadoGaleria = {
 	recetas: [],
 	filtroTiempo: 'all',
@@ -886,7 +971,10 @@ function cargarRecetasConFallback() {
 
 document.addEventListener('DOMContentLoaded', function() {
 	window.addEventListener('scroll', cambiarNavbarEnScroll);
+	window.addEventListener('scroll', actualizarEnlaceActivoPorSeccion);
+	inicializarMenuMovil();
 	cambiarNavbarEnScroll();
+	actualizarEnlaceActivoPorSeccion();
 
 	cargarRecetasConFallback()
 		.then(function(data) {

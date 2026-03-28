@@ -17,7 +17,7 @@
     <!-- Page Navbar -->
     <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="navbar-brand" href="#"><strong class="text-primary">Sabors de Mallorca</strong></a>
+            <a class="navbar-brand brand-title" href="#"><strong><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,19 +28,19 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#galeria">Galería</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#mapa">Mapa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testmonial">Testmonial</a>
+                        <a class="nav-link" href="#features">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link nav-link-contact-us" href="#contact-us">Contact Us</a>
                     </li>
-                    <li class="nav-item ml-md-4">
-                        <a class="btn btn-primary" href="#contact">Contáctanos</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Nosotros</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +90,57 @@
         </section>
 
 
-    
+    <section id="mapa" class="py-5 mapa-section">
+        <div class="container">
+            <h2 class="mb-4 text-center">Mapa gastronómico</h2>
+            <div class="mapa-layout">
+                <aside class="mapa-filtros" aria-label="Filtros del mapa">
+                    <h3 class="mapa-filtros-titulo">Explorar</h3>
+                    <p class="mapa-filtros-subtitulo">Filtra por tipo de receta o zona de Mallorca</p>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-tipo">Tipo de receta</label>
+                        <select id="mapa-tipo" class="mapa-select" aria-label="Filtrar por tipo de receta">
+                            <option value="all">Todas</option>
+                            <option value="entrantes">Entrantes</option>
+                            <option value="principales">Platos principales</option>
+                            <option value="dulces">Dulces</option>
+                        </select>
+                    </div>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-zona">Zona</label>
+                        <select id="mapa-zona" class="mapa-select" aria-label="Filtrar por zona">
+                            <option value="all">Toda Mallorca</option>
+                            <option value="palma">Palma</option>
+                            <option value="tramuntana">Serra de Tramuntana</option>
+                            <option value="llevant">Llevant</option>
+                        </select>
+                    </div>
+
+                    <div class="mapa-filtro-grupo">
+                        <label class="mapa-filtro-label" for="mapa-tiempo">Tiempo de preparación</label>
+                        <select id="mapa-tiempo" class="mapa-select" aria-label="Filtrar por tiempo de preparación">
+                            <option value="all">Cualquier duración</option>
+                            <option value="rapidas">Rápidas</option>
+                            <option value="medias">Medias</option>
+                            <option value="largas">Largas</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <div class="mapa-card">
+                    <iframe
+                        class="mapa-iframe"
+                        title="Mapa de Mallorca"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps?q=Mallorca,+Illes+Balears&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section class="has-bg-img" id="features">
@@ -114,14 +164,81 @@
         </div><!-- End of Modal -->     
     </section><!-- End of features Section -->  
 
-     
-
-    <!-- Testmonial Section -->
-    <section class="text-center pt-5" id="testmonial">
-        <!-- Container -->
+    <!-- Contacto (inspirado en Templatemo Klassy Cafe) -->
+    <section id="contact-us" class="contact-us-reservation">
         <div class="container">
-        </div><!-- End of Cotanier -->  
-    </section><!-- End of Testmonial Section -->
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="contact-us-left">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Contáctanos para dudas, colaboraciones o sugerencias</h2>
+                        </div>
+                        <p>Estamos aquí para ayudarte. Si tienes preguntas sobre el proyecto, quieres colaborar o compartir ideas, escríbenos y te responderemos lo antes posible.</p>
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div class="contact-card">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Teléfono</h4>
+                                    <span><a href="tel:+34600123456">+34 600 123 456</a><br><a href="tel:+34971000123">+34 971 000 123</a></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="contact-card">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Email</h4>
+                                    <span><a href="mailto:sabors_mallorca@gmail.com">sabors_mallorca@gmail.com</a><br><a href="mailto:info@saborsmallorca.com">info@saborsmallorca.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="contact-us-form-box">
+                        <form id="contact-us-form" class="contact-us-form" action="#" method="post">
+                            <h4>Escríbenos</h4>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="text" id="contact-us-name" placeholder="Tu nombre" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="email" type="email" id="contact-us-email" placeholder="Tu email" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="phone" type="tel" id="contact-us-phone" placeholder="Teléfono" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="contact-us-subject" placeholder="Asunto" required>
+                                    </fieldset>
+                                </div>
+                                <div class="col-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="4" id="contact-us-message" placeholder="Mensaje"></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-12">
+                                    <fieldset>
+                                        <button type="submit" class="contact-us-button">Enviar mensaje</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Contacto (estilo Team) -->
     <section id="contact" class="p-0">
@@ -180,8 +297,8 @@
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5 footer-main">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href="#home" class="navbar-brand">
-                    <h1 class="text-primary m-0"><span class="text-white">Sabors</span> de Mallorca</h1>
+                <a href="#home" class="navbar-brand brand-title">
+                    <h1 class="m-0"><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></h1>
                 </a>
                 <p>Recetas tradicionales, ingredientes de temporada y cultura gastronómica mallorquina.</p>
                 <h6 class="text-white text-uppercase mt-4 mb-3 footer-kicker">Síguenos</h6>
@@ -223,7 +340,7 @@
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5 footer-border">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white-50">Copyright &copy; <span>Sabors de Mallorca</span>. <script>document.write(new Date().getFullYear())</script></p>
+                <p class="m-0 text-white-50">Copyright &copy; <span class="brand-title"><span class="brand-sabors">Sabors</span> <span class="brand-mallorca">de Mallorca</span></span>. <script>document.write(new Date().getFullYear())</script></p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
                 <p class="m-0 text-white-50">Plantilla base: <a href="https://htmlcodex.com" target="_blank" rel="noopener" class="text-white-50">HTML Codex</a></p>
